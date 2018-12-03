@@ -1,0 +1,12 @@
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\bin\Debug\netcoreapp2.1\Schededule.Business.deps.json
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\bin\Debug\netcoreapp2.1\Schededule.Business.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.csprojAssemblyReference.cache
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.AssemblyInfoInputs.cache
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.AssemblyInfo.cs
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\bin\Debug\netcoreapp2.1\Schededule.Business.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.csproj.CopyComplete
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schededule.Business\obj\Debug\netcoreapp2.1\Schededule.Business.pdb
