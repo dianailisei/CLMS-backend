@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Service", "01 - Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schedule.Domain", "Schedule.Domain\Schedule.Domain.csproj", "{CC29B0CE-D4F9-4A1F-AD8A-446D305BE1CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schedule.Business", "Schededule.Business\Schedule.Business.csproj", "{B5C2A4B1-4C5F-4FDC-A2E0-4AAC8BCFEC13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schedule.Business", "Schedule.Business\Schedule.Business.csproj", "{B5C2A4B1-4C5F-4FDC-A2E0-4AAC8BCFEC13}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schedule.Persistance", "Schedule.Persistance\Schedule.Persistance.csproj", "{CE9F3EF5-7D80-4076-A953-1C7FA926EA3D}"
 EndProject

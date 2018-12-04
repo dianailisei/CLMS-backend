@@ -13870,8 +13870,8 @@
     },
     "Schedule.Business/1.0.0": {
       "type": "project",
-      "path": "../Schededule.Business/Schedule.Business.csproj",
-      "msbuildProject": "../Schededule.Business/Schedule.Business.csproj"
+      "path": "../Schedule.Business/Schedule.Business.csproj",
+      "msbuildProject": "../Schedule.Business/Schedule.Business.csproj"
     },
     "Schedule.Domain/1.0.0": {
       "type": "project",
@@ -13916,8 +13916,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj": {
-              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj"
+            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj": {
+              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj"
             }
           }
         }

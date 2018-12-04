@@ -2985,11 +2985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj",
+      "projectUniqueName": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj",
       "projectName": "Schedule.Business",
-      "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj",
+      "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj",
       "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\obj\\",
+      "outputPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
