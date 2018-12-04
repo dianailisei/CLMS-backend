@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Schededule.Business\Schededule.Business.csproj" />
+    <ProjectReference Include="..\Schededule.Business\Schedule.Business.csproj" />
   </ItemGroup>
 
 </Project>

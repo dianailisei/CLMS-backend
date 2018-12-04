@@ -5474,7 +5474,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Schededule.Business/1.0.0": {
+      "Schedule.Business/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
@@ -5482,10 +5482,10 @@
           "Schedule.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Schededule.Business.dll": {}
+          "bin/placeholder/Schedule.Business.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Schededule.Business.dll": {}
+          "bin/placeholder/Schedule.Business.dll": {}
         }
       },
       "Schedule.Domain/1.0.0": {
@@ -5503,7 +5503,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.1.6",
-          "Schededule.Business": "1.0.0"
+          "Schedule.Business": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Schedule.Persistance.dll": {}
@@ -14158,10 +14158,10 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "Schededule.Business/1.0.0": {
+    "Schedule.Business/1.0.0": {
       "type": "project",
-      "path": "../Schededule.Business/Schededule.Business.csproj",
-      "msbuildProject": "../Schededule.Business/Schededule.Business.csproj"
+      "path": "../Schededule.Business/Schedule.Business.csproj",
+      "msbuildProject": "../Schededule.Business/Schedule.Business.csproj"
     },
     "Schedule.Domain/1.0.0": {
       "type": "project",
@@ -14179,7 +14179,7 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Schededule.Business >= 1.0.0",
+      "Schedule.Business >= 1.0.0",
       "Schedule.Persistance >= 1.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1"
     ]
@@ -14214,8 +14214,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schededule.Business.csproj": {
-              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schededule.Business.csproj"
+            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj": {
+              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj"
             },
             "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Persistance\\Schedule.Persistance.csproj": {
               "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Persistance\\Schedule.Persistance.csproj"

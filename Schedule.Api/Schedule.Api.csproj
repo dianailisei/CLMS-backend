@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Schededule.Business\Schededule.Business.csproj" />
+    <ProjectReference Include="..\Schededule.Business\Schedule.Business.csproj" />
     <ProjectReference Include="..\Schedule.Persistance\Schedule.Persistance.csproj" />
   </ItemGroup>
 

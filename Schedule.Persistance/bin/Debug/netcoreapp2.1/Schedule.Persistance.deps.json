@@ -9,7 +9,7 @@
       "Schedule.Persistance/1.0.0": {
         "dependencies": {
           "Microsoft.NETCore.App": "2.1.0",
-          "Schededule.Business": "1.0.0"
+          "Schedule.Business": "1.0.0"
         },
         "runtime": {
           "Schedule.Persistance.dll": {}
@@ -41,12 +41,12 @@
           "Microsoft.NETCore.Platforms": "2.1.0"
         }
       },
-      "Schededule.Business/1.0.0": {
+      "Schedule.Business/1.0.0": {
         "dependencies": {
           "Schedule.Domain": "1.0.0"
         },
         "runtime": {
-          "Schededule.Business.dll": {}
+          "Schedule.Business.dll": {}
         }
       },
       "Schedule.Domain/1.0.0": {
@@ -111,7 +111,7 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "Schededule.Business/1.0.0": {
+    "Schedule.Business/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -7,10 +7,10 @@ C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\obj\De
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.runtimeconfig.json
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.runtimeconfig.dev.json
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.pdb
-C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schededule.Business.dll
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
-C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schededule.Business.pdb
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.csproj.CopyComplete
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.dll
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Business.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
