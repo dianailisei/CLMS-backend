@@ -12,13 +12,13 @@ namespace Schedule.Business.Student
     {
         private readonly IRepository repository;
 
-        public StudentService(IRepository repository) => this.repository = repository;
+        /*public StudentService(IRepository repository) => this.repository = repository;
 
         public Task<List<StudentDetailsModel>> GetAll() => GetAllStudentsDetails().ToListAsync();
 
         public Task<StudentDetailsModel> FindById(Guid id) => GetAllStudentsDetails().SingleOrDefaultAsync(c => c.Id == id);
 
-       /* public async Task<Guid> CreateNew(StudentCreateModel newStudent)
+        public async Task<Guid> CreateNew(StudentCreateModel newStudent)
         {
             var student = Domain.Entities.Student.Create(
                 );

@@ -10,12 +10,12 @@ C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\obj\Debug\netc
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.AssemblyInfo.cs
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.RazorTargetAssemblyInfo.cache
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Api.pdb
-C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schededule.Business.dll
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Persistance.dll
-C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schededule.Business.pdb
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Persistance.pdb
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.csproj.CopyComplete
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.dll
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Business.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Business.pdb

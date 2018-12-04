@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Dynamic;
 
 namespace Schedule.Domain.Entities
 {
-    public class Student : Entity
+    public class Student : Person
     {
         public string Group { get; set; }
         public short Year { get; set; }
