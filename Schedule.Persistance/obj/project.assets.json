@@ -5259,7 +5259,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Schededule.Business/1.0.0": {
+      "Schedule.Business/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
@@ -5267,10 +5267,10 @@
           "Schedule.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Schededule.Business.dll": {}
+          "bin/placeholder/Schedule.Business.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Schededule.Business.dll": {}
+          "bin/placeholder/Schedule.Business.dll": {}
         }
       },
       "Schedule.Domain/1.0.0": {
@@ -13868,10 +13868,10 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "Schededule.Business/1.0.0": {
+    "Schedule.Business/1.0.0": {
       "type": "project",
-      "path": "../Schededule.Business/Schededule.Business.csproj",
-      "msbuildProject": "../Schededule.Business/Schededule.Business.csproj"
+      "path": "../Schededule.Business/Schedule.Business.csproj",
+      "msbuildProject": "../Schededule.Business/Schedule.Business.csproj"
     },
     "Schedule.Domain/1.0.0": {
       "type": "project",
@@ -13883,7 +13883,7 @@
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.All >= 2.1.6",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Schededule.Business >= 1.0.0"
+      "Schedule.Business >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13916,8 +13916,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schededule.Business.csproj": {
-              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schededule.Business.csproj"
+            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj": {
+              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schededule.Business\\Schedule.Business.csproj"
             }
           }
         }

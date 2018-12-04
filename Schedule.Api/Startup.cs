@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Schededule.Business;
+using Schedule.Business;
 using Schedule.Persistance;
 using Swashbuckle.AspNetCore.Swagger;
 
