@@ -2,7 +2,7 @@
 
 namespace Schedule.Business.Student
 {
-    class StudentDetailsModel
+    public class StudentDetailsModel
     {
         public Guid Id { get; set; }
 
@@ -11,6 +11,8 @@ namespace Schedule.Business.Student
         public string LastName { get; set; }
 
         public string Email { get; set; }
+
+        public string Password { get; set; }
 
         public string Group { get; set; }
 

@@ -4,15 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Schedule.Domain.Interfaces;
-using Schedule.Domain.Entities;
 
 namespace Schedule.Business.Student
 {
-    class StudentService
+    public sealed class StudentService : IStudentService
     {
         private readonly IRepository repository;
 
-        /*public StudentService(IRepository repository) => this.repository = repository;
+        public StudentService(IRepository repository) => this.repository = repository;
 
         public Task<List<StudentDetailsModel>> GetAll() => GetAllStudentsDetails().ToListAsync();
 
@@ -20,23 +19,25 @@ namespace Schedule.Business.Student
 
         public async Task<Guid> CreateNew(StudentCreateModel newStudent)
         {
-            var student = Domain.Entities.Student.Create(
-                );
+            var student = Domain.Entities.Student.Create(newStudent.FirstName, newStudent.LastName,
+                newStudent.Email,newStudent.Password, newStudent.Group, newStudent.Year);
 
-            await this.repository.AddNewAsync(customer);
-            await this.repository.SaveAsync();
+            await repository.AddNewAsync(student);
+            await repository.SaveAsync();
 
-            return customer.Id;
+            return student.Id;
         }
 
-        private IQueryable<StudentDetailsModel> GetAllStudentsDetails() => this.repository.GetAll<Domain.Entities.Student>()
-            .Select(c => new CustomerDetailsModel
+        private IQueryable<StudentDetailsModel> GetAllStudentsDetails() => repository.GetAll<Domain.Entities.Student>()
+            .Select(s => new StudentDetailsModel
             {
-                Id = c.Id,
-                FirstName = c.FirstName,
-                LastName = c.LastName,
-                Email = c.Email,
-                MoneySpent = c.MoneySpent
-            });*/
+                Id = s.Id,
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                Email = s.Email,
+                Password = s.Password,
+                Group = s.Group,
+                Year = s.Year
+            });
     }
 }
