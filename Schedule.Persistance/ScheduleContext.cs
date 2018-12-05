@@ -10,7 +10,13 @@ namespace Schedule.Persistance
     class ScheduleContext : DbContext, IRepository
     {
         public ScheduleContext(DbContextOptions<ScheduleContext> options)
-            : base(options) => Database.Migrate();
+            : base(options)
+        {
+            Database.Migrate();
+            Database.EnsureCreated();
+        }
+
+        internal DbSet<Student> Students { get; private set; }
 
         public IQueryable<TEntity> GetAll<TEntity>() where TEntity : Entity
         {
