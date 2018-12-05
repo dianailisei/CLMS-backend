@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Schedule.Domain.Entities
 {
-    class Lecture : Course
+    public class Lecture : Course
     {
         public string HalfYear { get; private set; }
         public ICollection<Teacher> Teachers { get; private set; }

@@ -1,6 +1,6 @@
 ﻿namespace Schedule.Domain.Entities
 {
-    class Teacher : Person
+    public class Teacher : Person
     {
 
     }

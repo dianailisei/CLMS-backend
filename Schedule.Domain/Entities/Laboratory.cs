@@ -2,7 +2,7 @@
 
 namespace Schedule.Domain.Entities
 {
-    class Laboratory : Course
+    public class Laboratory : Course
     {
         public string Group { get; private set; }
         public Teacher Teacher { get; private set; }
