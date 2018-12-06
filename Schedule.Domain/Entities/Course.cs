@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Schedule.Domain.Entities
+﻿namespace Schedule.Domain.Entities
 {
     public abstract class Course : Entity
     {
