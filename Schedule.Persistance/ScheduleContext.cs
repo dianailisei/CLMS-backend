@@ -7,7 +7,7 @@ using Schedule.Domain.Interfaces;
 
 namespace Schedule.Persistance
 {
-    class ScheduleContext : DbContext, IRepository
+    public class ScheduleContext : DbContext, IRepository
     {
         public ScheduleContext(DbContextOptions<ScheduleContext> options)
             : base(options)
@@ -19,6 +19,11 @@ namespace Schedule.Persistance
         internal DbSet<Student> Students { get; private set; }
         internal DbSet<Laboratory> Laboratories { get; private set; }
         internal DbSet<Teacher> Teachers { get; private set; }
+
+        /*protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=localhost;Database=dotnot;Trusted_Connection=True;");
+        }*/
 
         public IQueryable<TEntity> GetAll<TEntity>() where TEntity : Entity
         {
