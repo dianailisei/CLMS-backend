@@ -22,3 +22,15 @@ C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Business\obj\Debug
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CopyComplete
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
 C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CoreCompileInputs.cache
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfoInputs.cache
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfo.cs
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.deps.json
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.dll
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CopyComplete
