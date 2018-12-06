@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Schedule.Domain.Entities;
 
 namespace Schedule.Business.Laboratory
 {
@@ -14,7 +13,7 @@ namespace Schedule.Business.Laboratory
         public string Group { get; set; }
 
         [Required]
-        public Teacher Teacher { get; set; }
+        public Domain.Entities.Teacher Teacher { get; set; }
 
         [Required]
         [MaxLength(50)]

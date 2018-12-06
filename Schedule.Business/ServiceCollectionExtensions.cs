@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Schedule.Business.Laboratory;
 using Schedule.Business.Student;
+using Schedule.Business.Teacher;
 
 namespace Schedule.Business
 {
@@ -12,6 +13,7 @@ namespace Schedule.Business
             // Example: services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ILaboratoryService, LaboratoryService>();
+            services.AddScoped<ITeacherService, TeacherService>();
 
             return services;
         }

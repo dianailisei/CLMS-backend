@@ -7,7 +7,7 @@ using Schedule.Domain.Interfaces;
 
 namespace Schedule.Business.Laboratory
 {
-    class LaboratoryService : ILaboratoryService
+    public sealed class LaboratoryService : ILaboratoryService
     {
         private readonly IRepository _repository;
 

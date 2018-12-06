@@ -1,5 +1,4 @@
 ﻿using System;
-using Schedule.Domain.Entities;
 
 namespace Schedule.Business.Laboratory
 {
@@ -11,6 +10,6 @@ namespace Schedule.Business.Laboratory
         public short StartHour { get; set; }
         public short EndHour { get; set; }
         public string Group { get; set; }
-        public Teacher Teacher { get; set; }
+        public Domain.Entities.Teacher Teacher { get; set; }
     }
 }
