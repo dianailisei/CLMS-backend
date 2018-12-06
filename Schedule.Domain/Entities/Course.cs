@@ -2,9 +2,8 @@
 
 namespace Schedule.Domain.Entities
 {
-    abstract class Course
+    public abstract class Course : Entity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Weekday { get; set; }
         public short StartHour { get; set; }

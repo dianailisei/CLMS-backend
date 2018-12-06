@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Schedule.Domain.Entities
 {
-    class Subject
+    public class Subject
     {
         public Guid SubjectId { get; private set; }
         public string Name { get; private set; }

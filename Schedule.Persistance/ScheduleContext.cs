@@ -17,6 +17,7 @@ namespace Schedule.Persistance
         }
 
         internal DbSet<Student> Students { get; private set; }
+        internal DbSet<Laboratory> Laboratories { get; private set; }
 
         public IQueryable<TEntity> GetAll<TEntity>() where TEntity : Entity
         {
