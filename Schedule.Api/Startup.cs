@@ -21,7 +21,7 @@ namespace Schedule.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddBusiness().AddPersistance(@"Server=localhost;Database=dotnot;Trusted_Connection=True;");
+            services.AddBusiness().AddPersistance("Server=den1.mssql8.gear.host; Database=dotnot;User Id=dotnot;Password=Do75j23S!1!v;");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

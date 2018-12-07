@@ -10,7 +10,7 @@ using Schedule.Persistance;
 namespace Schedule.Persistance.Migrations
 {
     [DbContext(typeof(ScheduleContext))]
-    [Migration("20181206193432_InitialCreate")]
+    [Migration("20181207123428_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
