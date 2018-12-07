@@ -19,11 +19,15 @@ namespace Schedule.Persistance
         internal DbSet<Student> Students { get; private set; }
         internal DbSet<Laboratory> Laboratories { get; private set; }
         internal DbSet<Teacher> Teachers { get; private set; }
+        internal DbSet<Subject> Subjects { get; private set; }
+        internal DbSet<Lecture> Lectures { get; private set; }
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=localhost;Database=dotnot;Trusted_Connection=True;");
-        }*/
+        }
+        */
+
 
         public IQueryable<TEntity> GetAll<TEntity>() where TEntity : Entity
         {
