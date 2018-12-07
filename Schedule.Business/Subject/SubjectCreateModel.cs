@@ -14,6 +14,6 @@ namespace Schedule.Business.Subject
         public ICollection<Lecture> Lectures { get; private set; }
 
         [Required]
-        public ICollection<Laboratory> Laboratories { get; private set; }
+        public ICollection<Domain.Entities.Laboratory> Laboratories { get; private set; }
     }
 }

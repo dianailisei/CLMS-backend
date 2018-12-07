@@ -13,13 +13,13 @@ namespace Schedule.Business.Subject
 
         public SubjectService(IRepository repository) => this.repository = repository;
 
-        public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().Where(s => s.Name != null).ToListAsync();
+        public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().ToListAsync();
 
         public async Task<SubjectDetailsModel> FindById(Guid id) => await GetAllSubjectsDetails().SingleOrDefaultAsync(s => s.Id == id);
 
         public async Task<Guid> CreateNew(SubjectCreateModel newSubject)
         {
-            var subject = Schedule.Domain.Entities.Subject.Create(
+            var subject = Domain.Entities.Subject.Create(
                 name: newSubject.Name,
                 laboratories: newSubject.Laboratories,
                 lectures: newSubject.Lectures);
@@ -30,7 +30,7 @@ namespace Schedule.Business.Subject
             return subject.Id;
         }
 
-        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => repository.GetAll<Schedule.Domain.Entities.Subject>()
+        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => repository.GetAll<Domain.Entities.Subject>()
                              .Select(s => new SubjectDetailsModel
                              {
                                  Id = s.Id,

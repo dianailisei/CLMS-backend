@@ -12,6 +12,6 @@ namespace Schedule.Business.Subject
 
         public ICollection<Lecture> Lectures { get; set; }
 
-        public ICollection<Laboratory> Laboratories { get; set; }
+        public ICollection<Domain.Entities.Laboratory> Laboratories { get; set; }
     }
 }

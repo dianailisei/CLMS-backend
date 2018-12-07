@@ -11,6 +11,6 @@ namespace Schedule.Business.Teacher
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public ICollection<Subject> Subjects { get; set; }
+        public ICollection<Domain.Entities.Subject> Subjects { get; set; }
     }
 }
