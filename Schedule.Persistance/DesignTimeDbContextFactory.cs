@@ -17,7 +17,7 @@ namespace Schedule.Persistance
                 .AddJsonFile("appsettings.json")
                 .Build();
             var builder = new DbContextOptionsBuilder<ScheduleContext>();
-            var connectionString = "Server=localhost;Database=dotnot;Trusted_Connection=True;";
+            var connectionString = "Server=den1.mssql8.gear.host; Database=dotnot;User Id=dotnot;Password=Do75j23S!1!v;";
             builder.UseSqlServer(connectionString);
             return new ScheduleContext(builder.Options);
         }
