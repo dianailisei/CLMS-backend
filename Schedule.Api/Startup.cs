@@ -22,6 +22,7 @@ namespace Schedule.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddBusiness().AddPersistance("Server=den1.mssql8.gear.host; Database=dotnot;User Id=dotnot;Password=Do75j23S!1!v;");
+            //services.AddBusiness().AddPersistance(@"Server=MIHAI-ACER\SQLSERVER;Database=dotnot;Trusted_Connection=True;");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
