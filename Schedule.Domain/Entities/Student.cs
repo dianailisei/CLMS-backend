@@ -23,5 +23,16 @@ namespace Schedule.Domain.Entities
             Group = group,
             Year = year
         };
+
+        public void Update(string firstName, string lastName,
+            string email, string pass, string group, short year)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Password = pass;
+            Group = group;
+            Year = year;
+        }
     }
 }

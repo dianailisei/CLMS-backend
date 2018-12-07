@@ -28,6 +28,25 @@ namespace Schedule.Business.Student
             return student.Id;
         }
 
+        public async Task<Guid> Update(Guid id, StudentCreateModel updatedStudent)
+        {
+            var exist = await repository.FindByIdAsync<Domain.Entities.Student>(id);
+            if (exist != null)
+            {
+                exist.Update(updatedStudent.FirstName, updatedStudent.LastName,
+                    updatedStudent.Email, updatedStudent.Password, updatedStudent.Group, updatedStudent.Year);
+                await repository.UpdateAsync(id, exist);
+                await repository.SaveAsync();
+            }
+            return exist.Id;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await repository.DeleteByIdAsync<Domain.Entities.Student>(id);
+            await repository.SaveAsync();
+        }
+
         private IQueryable<StudentDetailsModel> GetAllStudentsDetails() => repository.GetAll<Domain.Entities.Student>()
             .Select(s => new StudentDetailsModel
             {

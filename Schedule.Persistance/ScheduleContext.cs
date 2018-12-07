@@ -38,6 +38,20 @@ namespace Schedule.Persistance
         public async Task AddNewAsync<TEntity>(TEntity entity) where TEntity : Entity
             => await Set<TEntity>().AddAsync(entity);
 
+        public async Task DeleteByIdAsync<TEntity>(Guid id) where TEntity : Entity
+        {
+            var entity = await FindByIdAsync<TEntity>(id);
+            Remove(entity);
+        }
+
+        public async Task UpdateAsync<TEntity>(Guid id, TEntity entity) where TEntity : Entity
+        {
+            TEntity exist = await Set<TEntity>().FindAsync(id);
+            if (exist != null)
+            {
+                Entry(exist).CurrentValues.SetValues(entity);
+            }
+        }
 
         public async Task SaveAsync() => await SaveChangesAsync();
     }

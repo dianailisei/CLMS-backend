@@ -40,5 +40,24 @@ namespace Schedule.Api.Controllers
             return CreatedAtRoute("FindStudentById", new { id = studentId}, studentCreateModel);
         }
 
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateStudent(Guid id,[FromBody] StudentCreateModel studentUpdateModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var studentId = await studentService.Update(id, studentUpdateModel);
+            return CreatedAtRoute("FindStudentById", new { id = studentId }, studentUpdateModel);
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteStudent(Guid id)
+        {
+            await studentService.Delete(id);
+            return Ok();
+        }
+
     }
 }
