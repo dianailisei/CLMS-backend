@@ -9,7 +9,7 @@ namespace Schedule.Domain.Entities
 
         public static Laboratory Create(string name, string group, Teacher teacher, string weekday, short starthour, short endhour) => new Laboratory
         {
-            Id = new Guid(),
+            Id = Guid.NewGuid(),
             Name = name,
             Group = group,
             Teacher = teacher,
@@ -17,5 +17,15 @@ namespace Schedule.Domain.Entities
             StartHour = starthour,
             EndHour = endhour
         };
+
+        public void Update(string name, string group, string weekday, short starthour, short endhour, Teacher teacher)
+        {
+            Name = name;
+            Group = group;
+            Weekday = weekday;
+            StartHour = starthour;
+            EndHour = endhour;
+            Teacher = teacher;
+        }
     }
 }

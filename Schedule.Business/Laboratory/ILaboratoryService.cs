@@ -11,5 +11,9 @@ namespace Schedule.Business.Laboratory
         Task<LaboratoryDetailsModel> FindById(Guid id);
 
         Task<Guid> CreateNew(LaboratoryCreateModel newLaboratory);
+
+        Task Delete(Guid id);
+
+        Task<Guid> Update(Guid id, LaboratoryCreateModel updatedLaboratory);
     }
 }

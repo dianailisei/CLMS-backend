@@ -28,6 +28,25 @@ namespace Schedule.Business.Laboratory
             return lab.Id;
         }
 
+        public async Task<Guid> Update(Guid id, LaboratoryCreateModel updatedLaboratory)
+        {
+            var exist = await _repository.FindByIdAsync<Domain.Entities.Laboratory>(id);
+            if (exist != null)
+            {
+                exist.Update(updatedLaboratory.Name, updatedLaboratory.Group, 
+                updatedLaboratory.Weekday, updatedLaboratory.StartHour, updatedLaboratory.EndHour, updatedLaboratory.Teacher);
+                await _repository.UpdateAsync(id, exist);
+                await _repository.SaveAsync();
+            }
+            return exist.Id;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await _repository.DeleteByIdAsync<Domain.Entities.Laboratory>(id);
+            await _repository.SaveAsync();
+        }
+
         private IQueryable<LaboratoryDetailsModel> GetAllLaboratoriesDetails()
         {
             return _repository
