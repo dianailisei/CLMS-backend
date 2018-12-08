@@ -11,5 +11,6 @@ namespace Schedule.Business.Subject
         Task<Guid> CreateNew(SubjectCreateModel newSubject);
 
         Task<List<SubjectDetailsModel>> GetAllSubjects();
+
     }
 }

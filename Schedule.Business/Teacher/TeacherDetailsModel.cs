@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Schedule.Domain.Entities;
 
 namespace Schedule.Business.Teacher
 {

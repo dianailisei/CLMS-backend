@@ -38,5 +38,24 @@ namespace Schedule.Business.Teacher
                 Password = t.Password,
                 Subjects = t.Subjects
             });
+
+        public async Task<Guid> Update(Guid id, TeacherCreateModel updatedTeacher)
+        {
+            var teacher = await _repository.FindByIdAsync<Domain.Entities.Teacher>(id);
+            if (teacher != null)
+            {
+                teacher.Update(updatedTeacher.FirstName, updatedTeacher.LastName,
+                    updatedTeacher.Email, updatedTeacher.Password);
+                await _repository.UpdateAsync(id, teacher);
+                await _repository.SaveAsync();
+            }
+            return teacher.Id;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await _repository.DeleteByIdAsync<Domain.Entities.Teacher>(id);
+            await _repository.SaveAsync();
+        }
     }
 }

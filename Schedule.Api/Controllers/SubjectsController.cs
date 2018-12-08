@@ -38,5 +38,7 @@ namespace Schedule.Api.Controllers
             var subjectId = await this.subjectService.CreateNew(model);
             return CreatedAtRoute("FindSubjectById", new { id = subjectId }, model);
         }
+
+
     }
 }
