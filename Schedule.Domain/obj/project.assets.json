@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mihai\\.nuget\\packages\\": {},
+    "C:\\Users\\Mihaela\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Mihaela\\Documents\\GitHub\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
       "projectName": "Schedule.Domain",
-      "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
-      "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Mihaela\\Documents\\GitHub\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
+      "packagesPath": "C:\\Users\\Mihaela\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mihaela\\Documents\\GitHub\\CLMS-backend\\Schedule.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mihaela\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -3,6 +3,7 @@ using Schedule.Business.Laboratory;
 using Schedule.Business.Student;
 using Schedule.Business.Teacher;
 using Schedule.Business.Subject;
+using Schedule.Business.Lecture;
 
 namespace Schedule.Business
 {
@@ -16,6 +17,7 @@ namespace Schedule.Business
             services.AddScoped<ILaboratoryService, LaboratoryService>();
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ISubjectService, SubjectService>();
+            services.AddScoped<ILectureService, LectureService>();
 
             return services;
         }
