@@ -10,7 +10,7 @@ namespace Schedule.Business.Subject
 
         public string Name { get; set; }
 
-        public ICollection<Lecture> Lectures { get; set; }
+        public ICollection<Domain.Entities.Lecture> Lectures { get; set; }
 
         public ICollection<Domain.Entities.Laboratory> Laboratories { get; set; }
     }
