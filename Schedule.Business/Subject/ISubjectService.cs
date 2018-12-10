@@ -8,12 +8,13 @@ namespace Schedule.Business.Subject
     {
         Task<SubjectDetailsModel> FindById(Guid id);
 
-        Task<Guid> CreateNew(SubjectCreateModel newSubject);
+        Task<Guid> CreateNew(Guid teacherGuid, SubjectCreateModel newSubject);
+
+        Task<List<SubjectDetailsModel>> GetAllSubjects();
 
         Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject);
 
         Task Delete(Guid id);
 
-        Task<List<SubjectDetailsModel>> GetAllSubjects();
     }
 }

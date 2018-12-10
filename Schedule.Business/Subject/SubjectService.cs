@@ -9,51 +9,51 @@ namespace Schedule.Business.Subject
 {
     public sealed class SubjectService : ISubjectService
     {
-        private readonly IRepository repository;
+        private readonly IRepository _repository;
 
-        public SubjectService(IRepository repository) => this.repository = repository;
+        public SubjectService(IRepository repository) => this._repository = repository;
 
         public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().ToListAsync();
 
         public async Task<SubjectDetailsModel> FindById(Guid id) => await GetAllSubjectsDetails().SingleOrDefaultAsync(s => s.Id == id);
 
-        public async Task<Guid> CreateNew(SubjectCreateModel newSubject)
+        public async Task<Guid> CreateNew(Guid teacherGuid, SubjectCreateModel newSubject)
         {
-            var subject = Domain.Entities.Subject.Create(
-                name: newSubject.Name);
+            var teacher = await _repository.FindByIdAsync<Domain.Entities.Teacher>(teacherGuid);
+            var subject = Domain.Entities.Subject.Create(teacher, newSubject.Name);
 
-            await this.repository.AddNewAsync(subject);
-            await this.repository.SaveAsync();
+            await this._repository.AddNewAsync(subject);
+            await this._repository.SaveAsync();
 
             return subject.Id;
         }
 
         public async Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject)
         {
-            var subject = await repository.FindByIdAsync<Domain.Entities.Subject>(id);
+            var subject = await _repository.FindByIdAsync<Domain.Entities.Subject>(id);
             if (subject != null)
             {
-                subject.Update(updatedSubject.Name, updatedSubject.Lectures,
-                    updatedSubject.Laboratories);
-                await repository.UpdateAsync(id, subject);
-                await repository.SaveAsync();
+                subject.Update(updatedSubject.Name);
+                await _repository.UpdateAsync(id, subject);
+                await _repository.SaveAsync();
             }
             return subject.Id;
         }
 
         public async Task Delete(Guid id)
         {
-            await repository.DeleteByIdAsync<Domain.Entities.Subject>(id);
-            await repository.SaveAsync();
+            await _repository.DeleteByIdAsync<Domain.Entities.Subject>(id);
+            await _repository.SaveAsync();
         }
 
-        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => repository.GetAll<Domain.Entities.Subject>()
-                             .Select(s => new SubjectDetailsModel
-                             {
-                                 Id = s.Id,
-                                 Name = s.Name,
-                                 Laboratories = s.Laboratories,
-                                 Lectures = s.Lectures
-                             });
+        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => _repository.GetAll<Domain.Entities.Subject>()
+            .Select(s => new SubjectDetailsModel
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Laboratories = s.Laboratories,
+                Lectures = s.Lectures,
+                HeadOfDepartment = s.HeadOfDepartment
+            });
     }
 }

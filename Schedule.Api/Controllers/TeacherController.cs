@@ -5,7 +5,7 @@ using Schedule.Business.Teacher;
 
 namespace Schedule.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("schedule/[controller]")]
     [ApiController]
     public class TeacherController : ControllerBase
     {

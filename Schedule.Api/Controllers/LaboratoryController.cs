@@ -8,7 +8,7 @@ using Schedule.Business.Laboratory;
 
 namespace Schedule.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("schedule/[controller]")]
     [ApiController]
     public class LaboratoryController : ControllerBase
     {
