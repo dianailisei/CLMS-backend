@@ -12,13 +12,18 @@ namespace Schedule.Persistance
         public ScheduleContext(DbContextOptions<ScheduleContext> options)
             : base(options) => Database.Migrate();
 
-        internal DbSet<Subject> Subjects { get; private set; }
-
+        internal DbSet<Student> Students { get; private set; }
         internal DbSet<Laboratory> Laboratories { get; private set; }
-
+        internal DbSet<Teacher> Teachers { get; private set; }
+        internal DbSet<Subject> Subjects { get; private set; }
         internal DbSet<Lecture> Lectures { get; private set; }
 
-        internal DbSet<Teacher> Teachers { get; private set; }
+        /*protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=localhost;Database=dotnot;Trusted_Connection=True;");
+        }
+        */
+
 
         public IQueryable<TEntity> GetAll<TEntity>() where TEntity : Entity
         {
@@ -33,6 +38,20 @@ namespace Schedule.Persistance
         public async Task AddNewAsync<TEntity>(TEntity entity) where TEntity : Entity
             => await Set<TEntity>().AddAsync(entity);
 
+        public async Task DeleteByIdAsync<TEntity>(Guid id) where TEntity : Entity
+        {
+            var entity = await FindByIdAsync<TEntity>(id);
+            Remove(entity);
+        }
+
+        public async Task UpdateAsync<TEntity>(Guid id, TEntity entity) where TEntity : Entity
+        {
+            TEntity exist = await Set<TEntity>().FindAsync(id);
+            if (exist != null)
+            {
+                Entry(exist).CurrentValues.SetValues(entity);
+            }
+        }
 
         public async Task SaveAsync() => await SaveChangesAsync();
     }

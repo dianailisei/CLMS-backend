@@ -38,5 +38,24 @@ namespace Schedule.Api.Controllers
             var subjectId = await this.subjectService.CreateNew(model);
             return CreatedAtRoute("FindSubjectById", new { id = subjectId }, model);
         }
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateSubject(Guid id, [FromBody] SubjectCreateModel subjectUpdateModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var subjectId = await subjectService.Update(id, subjectUpdateModel);
+            return CreatedAtRoute("FindSubjectById", new { id = subjectId }, subjectUpdateModel);
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteSubject(Guid id)
+        {
+            await subjectService.Delete(id);
+            return Ok();
+        }
     }
 }

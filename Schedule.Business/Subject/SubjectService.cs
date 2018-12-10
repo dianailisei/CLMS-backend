@@ -13,16 +13,14 @@ namespace Schedule.Business.Subject
 
         public SubjectService(IRepository repository) => this.repository = repository;
 
-        public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().Where(s => s.Name != null).ToListAsync();
+        public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().ToListAsync();
 
         public async Task<SubjectDetailsModel> FindById(Guid id) => await GetAllSubjectsDetails().SingleOrDefaultAsync(s => s.Id == id);
 
         public async Task<Guid> CreateNew(SubjectCreateModel newSubject)
         {
-            var subject = Schedule.Domain.Entities.Subject.Create(
-                name: newSubject.Name,
-                laboratories: newSubject.Laboratories,
-                lectures: newSubject.Lectures);
+            var subject = Domain.Entities.Subject.Create(
+                name: newSubject.Name);
 
             await this.repository.AddNewAsync(subject);
             await this.repository.SaveAsync();
@@ -30,7 +28,26 @@ namespace Schedule.Business.Subject
             return subject.Id;
         }
 
-        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => repository.GetAll<Schedule.Domain.Entities.Subject>()
+        public async Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject)
+        {
+            var subject = await repository.FindByIdAsync<Domain.Entities.Subject>(id);
+            if (subject != null)
+            {
+                subject.Update(updatedSubject.Name, updatedSubject.Lectures,
+                    updatedSubject.Laboratories);
+                await repository.UpdateAsync(id, subject);
+                await repository.SaveAsync();
+            }
+            return subject.Id;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await repository.DeleteByIdAsync<Domain.Entities.Subject>(id);
+            await repository.SaveAsync();
+        }
+
+        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => repository.GetAll<Domain.Entities.Subject>()
                              .Select(s => new SubjectDetailsModel
                              {
                                  Id = s.Id,

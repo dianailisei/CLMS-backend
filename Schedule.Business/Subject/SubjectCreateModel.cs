@@ -10,10 +10,8 @@ namespace Schedule.Business.Subject
         [MaxLength(100)]
         public string Name { get; set; }
 
-        [Required]
-        public ICollection<Lecture> Lectures { get; private set; }
+        public ICollection<Domain.Entities.Lecture> Lectures { get; private set; }
 
-        [Required]
-        public ICollection<Laboratory> Laboratories { get; private set; }
+        public ICollection<Domain.Entities.Laboratory> Laboratories { get; private set; }
     }
 }
