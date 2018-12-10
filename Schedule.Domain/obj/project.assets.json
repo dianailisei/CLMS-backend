@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miste\\.nuget\\packages\\": {},
+    "C:\\Users\\Diana\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Diana\\Desktop\\DotNot\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
       "projectName": "Schedule.Domain",
-      "projectPath": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
-      "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
-      "outputPath": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Diana\\Desktop\\DotNot\\CLMS-backend\\Schedule.Domain\\Schedule.Domain.csproj",
+      "packagesPath": "C:\\Users\\Diana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diana\\Desktop\\DotNot\\CLMS-backend\\Schedule.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Diana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

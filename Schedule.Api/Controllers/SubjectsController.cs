@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Schedule.Api.Controllers
 {
-    [Route("api/subjects")]
+    [Route("schedule/[controller]")]
     [ApiController]
     public class SubjectsController : ControllerBase
     {
@@ -27,16 +27,23 @@ namespace Schedule.Api.Controllers
             return Ok(subject);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateSubject([FromBody] SubjectCreateModel model)
+        [HttpPost("/teachers/{teacherId:guid}")]
+        public async Task<IActionResult> CreateSubject(Guid teacherId, [FromBody] SubjectCreateModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var subjectId = await this.subjectService.CreateNew(model);
+            var subjectId = await this.subjectService.CreateNew(teacherId, model);
             return CreatedAtRoute("FindSubjectById", new { id = subjectId }, model);
+        }
+
+        [HttpGet("/teachers/{teacherId:guid}")]
+        public async Task<IActionResult> GetSubjectsByTeacherId(Guid teacherId)
+        {
+            var subjects = await this.subjectService.GetAllSubjects();
+            return Ok();
         }
 
         [HttpPut("{id:guid}")]

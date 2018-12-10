@@ -7,9 +7,10 @@ namespace Schedule.Domain.Entities
         public string Group { get; private set; }
         public Teacher Teacher { get; private set; }
 
+
         public static Laboratory Create(string name, string group, Teacher teacher, string weekday, short starthour, short endhour) => new Laboratory
         {
-            Id = new Guid(),
+            Id = Guid.NewGuid(),
             Name = name,
             Group = group,
             Teacher = teacher,

@@ -10,6 +10,8 @@ namespace Schedule.Business.Subject
 
         public string Name { get; set; }
 
+        public Domain.Entities.Teacher HeadOfDepartment { get; set; }
+
         public ICollection<Domain.Entities.Lecture> Lectures { get; set; }
 
         public ICollection<Domain.Entities.Laboratory> Laboratories { get; set; }
