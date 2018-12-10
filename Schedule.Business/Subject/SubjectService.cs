@@ -20,14 +20,31 @@ namespace Schedule.Business.Subject
         public async Task<Guid> CreateNew(SubjectCreateModel newSubject)
         {
             var subject = Domain.Entities.Subject.Create(
-                name: newSubject.Name,
-                laboratories: newSubject.Laboratories,
-                lectures: newSubject.Lectures);
+                name: newSubject.Name);
 
             await this.repository.AddNewAsync(subject);
             await this.repository.SaveAsync();
 
             return subject.Id;
+        }
+
+        public async Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject)
+        {
+            var subject = await repository.FindByIdAsync<Domain.Entities.Subject>(id);
+            if (subject != null)
+            {
+                subject.Update(updatedSubject.Name, updatedSubject.Lectures,
+                    updatedSubject.Laboratories);
+                await repository.UpdateAsync(id, subject);
+                await repository.SaveAsync();
+            }
+            return subject.Id;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await repository.DeleteByIdAsync<Domain.Entities.Subject>(id);
+            await repository.SaveAsync();
         }
 
         private IQueryable<SubjectDetailsModel> GetAllSubjectsDetails() => repository.GetAll<Domain.Entities.Subject>()

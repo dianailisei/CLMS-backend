@@ -10,6 +10,10 @@ namespace Schedule.Business.Subject
 
         Task<Guid> CreateNew(SubjectCreateModel newSubject);
 
+        Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject);
+
+        Task Delete(Guid id);
+
         Task<List<SubjectDetailsModel>> GetAllSubjects();
     }
 }

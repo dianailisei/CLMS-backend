@@ -9,12 +9,19 @@ namespace Schedule.Domain.Entities
         public ICollection<Lecture> Lectures { get; private set; }
         public ICollection<Laboratory> Laboratories { get; private set; }
 
-        public static Subject Create(string name, ICollection<Lecture> lectures, ICollection<Laboratory> laboratories) => new Subject
+        public static Subject Create(string name)=> new Subject
         {
             Id = new Guid(),
             Name = name,
-            Lectures = lectures,
-            Laboratories = laboratories
+            Lectures = new List<Lecture>(),
+            Laboratories = new List<Laboratory>()
         };
+
+        public void Update(string name, ICollection<Lecture> lectures, ICollection<Laboratory> laboratories)
+        {
+            Name = name;
+            Lectures = lectures;
+            Laboratories = laboratories;
+        }
     }
 }
