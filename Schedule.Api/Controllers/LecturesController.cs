@@ -28,27 +28,27 @@ namespace Schedule.Api.Controllers
             return Ok(lecture);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateLecture([FromBody] LectureCreateModel lectureCreateModel)
+        [HttpPost("/subjects/{subjectId:guid}/teachers/{lecturerId}/[controller]")]
+        public async Task<IActionResult> CreateLecture(Guid lecturerId, Guid subjectId, [FromBody] LectureCreateModel lectureCreateModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var lectureId = await lectureService.CreateNew(lectureCreateModel);
+            var lectureId = await lectureService.CreateNew(lecturerId, subjectId, lectureCreateModel);
             return CreatedAtRoute("FindLectureById", new { id = lectureId }, lectureCreateModel);
         }
 
-        [HttpPut("{id:guid}")]
-        public async Task<IActionResult> UpdateLecture(Guid id, [FromBody] LectureCreateModel lectureUpdateModel)
+        [HttpPut("/teachers/{lecturerId}/[controller]")]
+        public async Task<IActionResult> UpdateLecture(Guid lecturerId, Guid id, [FromBody] LectureCreateModel lectureUpdateModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var lectureId = await lectureService.Update(id, lectureUpdateModel);
+            var lectureId = await lectureService.Update(lecturerId, id, lectureUpdateModel);
             return CreatedAtRoute("FindLectureById", new { id = lectureId }, lectureUpdateModel);
         }
 

@@ -30,16 +30,35 @@ namespace Schedule.Api.Controllers
             return Ok(lab);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateLaboratory([FromBody] LaboratoryCreateModel laboratoryCreateModel)
+        [HttpPost("/subjects/{subjectId:guid}/teachers/{teacherId}/[controller]")]
+        public async Task<IActionResult> CreateLaboratory(Guid teacherId, Guid subjectId, [FromBody] LaboratoryCreateModel laboratoryCreateModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var labId = await _laboratoryService.CreateNew(laboratoryCreateModel);
+            var labId = await _laboratoryService.CreateNew(teacherId, subjectId, laboratoryCreateModel);
             return CreatedAtRoute("FindLaboratoryById", new {id = labId}, laboratoryCreateModel);
+        }
+
+        [HttpPut("/teachers/{teacherId}/[controller]")]
+        public async Task<IActionResult> UpdateLaboratory(Guid teacherId, Guid id, [FromBody] LaboratoryCreateModel laboratoryUpdateModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var laboratoryId = await _laboratoryService.Update(teacherId, id, laboratoryUpdateModel);
+            return CreatedAtRoute("FindLaboratoryById", new { id = laboratoryId }, laboratoryUpdateModel);
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteLaboratory(Guid id)
+        {
+            await _laboratoryService.Delete(id);
+            return Ok();
         }
     }
 }

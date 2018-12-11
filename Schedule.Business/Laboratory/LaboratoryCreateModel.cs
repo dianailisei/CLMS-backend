@@ -13,9 +13,6 @@ namespace Schedule.Business.Laboratory
         public string Group { get; set; }
 
         [Required]
-        public Domain.Entities.Teacher Teacher { get; set; }
-
-        [Required]
         [MaxLength(50)]
         public string Weekday { get; set; }
 

@@ -55,5 +55,29 @@ namespace Schedule.Business.Subject
                 Lectures = s.Lectures,
                 HeadOfDepartment = s.HeadOfDepartment
             });
+
+        private IQueryable<SubjectDetailsModel> GetAllSubjectsDetailsByTeacherId(Guid teacherId) => _repository
+            .GetAll<Domain.Entities.Subject>()
+            .Where(s => s.HeadOfDepartment.Id == teacherId).Select(s => new SubjectDetailsModel
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Laboratories = s.Laboratories,
+                Lectures = s.Lectures,
+                HeadOfDepartment = s.HeadOfDepartment
+            });
+
+        public async Task<List<SubjectDetailsModel>> GetAllByTeacherId(Guid teacherGuid)
+        {
+            return await GetAllSubjectsDetailsByTeacherId(teacherGuid).ToListAsync();
+        }
+
+        public async Task DeleteAllByTeacherId(Guid teacherGuid)
+        {
+            var subjects = await GetAllByTeacherId(teacherGuid);
+            foreach (var subject in subjects)
+                await _repository.DeleteByIdAsync<Domain.Entities.Subject>(subject.Id);
+            await _repository.SaveAsync();
+        }
     }
 }
