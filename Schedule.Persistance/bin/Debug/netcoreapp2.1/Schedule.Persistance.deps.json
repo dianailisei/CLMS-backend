@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "8d19439ef22c432fe18f0eac697c8789fe30c00a"
+    "signature": "6c77bf82adffa18dc8baae759cb08428021b0c2a"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,6 +13,28 @@
         },
         "runtime": {
           "Schedule.Persistance.dll": {}
+        }
+      },
+      "FluentValidation/8.1.1": {
+        "dependencies": {
+          "System.ComponentModel.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.1.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/8.1.1": {
+        "dependencies": {
+          "FluentValidation": "8.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.1.0"
+          }
         }
       },
       "Microsoft.NETCore.App/2.1.0": {
@@ -41,8 +63,15 @@
           "Microsoft.NETCore.Platforms": "2.1.0"
         }
       },
+      "System.ComponentModel/4.3.0": {},
+      "System.ComponentModel.Primitives/4.3.0": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        }
+      },
       "Schedule.Business/1.0.0": {
         "dependencies": {
+          "FluentValidation.AspNetCore": "8.1.1",
           "Schedule.Domain": "1.0.0"
         },
         "runtime": {
@@ -61,6 +90,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3k+OrhhDP9EoKg9GqlvQ9SY/gjpMPLL9vCwMH58wOs0PIPTSB1vFZ2pDkXnshaMCgq28qjYxpkecapRuLXqHyg==",
+      "path": "fluentvalidation/8.1.1",
+      "hashPath": "fluentvalidation.8.1.1.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZbaxN66xeqcYYN/D0sUXZIT1UztAQ9mjNT4fJWYzwXgJw0yDnXTQWQo75dYaXMxVJSxV8oR15ePpE9s88y4j7A==",
+      "path": "fluentvalidation.aspnetcore/8.1.1",
+      "hashPath": "fluentvalidation.aspnetcore.8.1.1.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.1.0": {
       "type": "package",
@@ -110,6 +153,20 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.ComponentModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "path": "system.componentmodel/4.3.0",
+      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "path": "system.componentmodel.primitives/4.3.0",
+      "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
     },
     "Schedule.Business/1.0.0": {
       "type": "project",

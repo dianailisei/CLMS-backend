@@ -7,11 +7,11 @@ namespace Schedule.Api.Controllers
 {
     [Route("schedule/[controller]")]
     [ApiController]
-    public class StudentController : ControllerBase
+    public class StudentsController : ControllerBase
     {
         private readonly IStudentService studentService;
 
-        public StudentController(IStudentService studentService) =>
+        public StudentsController(IStudentService studentService) =>
             this.studentService = studentService;
 
         [HttpGet]
