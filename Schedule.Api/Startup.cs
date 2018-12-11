@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -25,7 +26,6 @@ namespace Schedule.Api
             //services.AddBusiness().AddPersistance(@"Server=MIHAI-ACER\SQLSERVER;Database=dotnot;Trusted_Connection=True;");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
             services.AddMvc();
             services.AddCors();
 

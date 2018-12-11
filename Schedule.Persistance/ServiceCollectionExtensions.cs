@@ -9,8 +9,9 @@ namespace Schedule.Persistance
         public static IServiceCollection AddPersistance(this IServiceCollection services, string connectionString)
         {
             services.AddDbContext<ScheduleContext>(options => options.UseSqlServer(connectionString));
-            services.AddScoped<IRepository>(provider => provider.GetService<ScheduleContext>());
-
+            services.AddScoped<IReadRepository>(provider => provider.GetService<ScheduleContext>());
+            services.AddScoped<IWriteRepository>(provider => provider.GetService<ScheduleContext>());
+            
             return services;
         }
     }
