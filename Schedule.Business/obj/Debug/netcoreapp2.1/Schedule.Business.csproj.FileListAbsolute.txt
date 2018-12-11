@@ -46,3 +46,7 @@ C:\Users\Mihaela\Documents\GitHub\CLMS-backend\Schedule.Business\obj\Debug\netco
 C:\Users\Mihaela\Documents\GitHub\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CopyComplete
 C:\Users\Mihaela\Documents\GitHub\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
 C:\Users\Mihaela\Documents\GitHub\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.runtimeconfig.json
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.runtimeconfig.dev.json
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.runtimeconfig.json
+C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.runtimeconfig.dev.json

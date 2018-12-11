@@ -7,7 +7,7 @@ using Schedule.Domain.Interfaces;
 
 namespace Schedule.Persistance
 {
-    public class ScheduleContext : DbContext, IRepository
+    public class ScheduleContext : DbContext, IReadRepository, IWriteRepository
     {
         public ScheduleContext(DbContextOptions<ScheduleContext> options)
             : base(options)
