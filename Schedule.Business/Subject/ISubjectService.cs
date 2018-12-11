@@ -10,11 +10,15 @@ namespace Schedule.Business.Subject
 
         Task<Guid> CreateNew(Guid teacherGuid, SubjectCreateModel newSubject);
 
+        Task<List<SubjectDetailsModel>> GetAllByTeacherId(Guid teacherGuid);
+
         Task<List<SubjectDetailsModel>> GetAllSubjects();
 
         Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject);
 
         Task Delete(Guid id);
+
+        Task DeleteAllByTeacherId(Guid id);
 
     }
 }

@@ -6,9 +6,9 @@ namespace Schedule.Domain.Entities
     {
         public string Group { get; private set; }
         public Teacher Teacher { get; private set; }
+        public Subject ParentSubject { get; private set; }
 
-
-        public static Laboratory Create(string name, string group, Teacher teacher, string weekday, short starthour, short endhour) => new Laboratory
+        public static Laboratory Create(string name, string group, Teacher teacher, string weekday, short starthour, short endhour, Subject parentSubject) => new Laboratory
         {
             Id = Guid.NewGuid(),
             Name = name,
@@ -16,7 +16,19 @@ namespace Schedule.Domain.Entities
             Teacher = teacher,
             Weekday = weekday,
             StartHour = starthour,
-            EndHour = endhour
+            EndHour = endhour,
+            ParentSubject = parentSubject
         };
+
+        public void Update(string name, string group, Teacher teacher, string weekday, short starthour, short endhour)
+        {
+            Name = name;
+            Group = group;
+            Teacher = teacher;
+            Weekday = weekday;
+            StartHour = starthour;
+            EndHour = endhour;
+            
+        }
     }
 }

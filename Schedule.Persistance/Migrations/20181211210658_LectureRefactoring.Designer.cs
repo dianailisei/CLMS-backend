@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Schedule.Persistance;
 
 namespace Schedule.Persistance.Migrations
 {
     [DbContext(typeof(ScheduleContext))]
-    partial class ScheduleContextModelSnapshot : ModelSnapshot
+    [Migration("20181211210658_LectureRefactoring")]
+    partial class LectureRefactoring
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,9 +32,9 @@ namespace Schedule.Persistance.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<Guid?>("ParentSubjectId");
-
                     b.Property<short>("StartHour");
+
+                    b.Property<Guid?>("SubjectId");
 
                     b.Property<Guid?>("TeacherId");
 
@@ -40,7 +42,7 @@ namespace Schedule.Persistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ParentSubjectId");
+                    b.HasIndex("SubjectId");
 
                     b.HasIndex("TeacherId");
 
@@ -133,9 +135,9 @@ namespace Schedule.Persistance.Migrations
 
             modelBuilder.Entity("Schedule.Domain.Entities.Laboratory", b =>
                 {
-                    b.HasOne("Schedule.Domain.Entities.Subject", "ParentSubject")
+                    b.HasOne("Schedule.Domain.Entities.Subject")
                         .WithMany("Laboratories")
-                        .HasForeignKey("ParentSubjectId");
+                        .HasForeignKey("SubjectId");
 
                     b.HasOne("Schedule.Domain.Entities.Teacher", "Teacher")
                         .WithMany()

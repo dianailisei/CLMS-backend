@@ -14,14 +14,15 @@ namespace Schedule.Business.Laboratory
         public LaboratoryService(IRepository repository) => _repository = repository;
 
         public Task<List<LaboratoryDetailsModel>> GetAll() => GetAllLaboratoriesDetails().ToListAsync();
-        
 
         public Task<LaboratoryDetailsModel> FindById(Guid id) => GetAllLaboratoriesDetails().SingleOrDefaultAsync(lab => lab.Id == id);
 
-        public async Task<Guid> CreateNew(LaboratoryCreateModel newLaboratory)
+        public async Task<Guid> CreateNew(Guid teacherId, Guid subjectId, LaboratoryCreateModel newLaboratory)
         {
-            var lab = Domain.Entities.Laboratory.Create(newLaboratory.Name, newLaboratory.Group, newLaboratory.Teacher,
-                newLaboratory.Weekday, newLaboratory.StartHour, newLaboratory.EndHour);
+            var teacher = await _repository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
+            var subject = await _repository.FindByIdAsync<Domain.Entities.Subject>(subjectId);
+            var lab = Domain.Entities.Laboratory.Create(newLaboratory.Name, newLaboratory.Group, teacher,
+                newLaboratory.Weekday, newLaboratory.StartHour, newLaboratory.EndHour, subject);
             await _repository.AddNewAsync(lab);
             await _repository.SaveAsync();
 
@@ -41,6 +42,26 @@ namespace Schedule.Business.Laboratory
                         Group = lab.Group,
                         Teacher = lab.Teacher
                         });
+        }
+
+        public async Task<Guid> Update(Guid teacherId, Guid id, LaboratoryCreateModel updatedLaboratory)
+        {
+            var teacher = await _repository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
+            var exist = await _repository.FindByIdAsync<Domain.Entities.Laboratory>(id);
+            if (exist != null)
+            {
+                exist.Update(updatedLaboratory.Name, updatedLaboratory.Group,
+                    teacher, updatedLaboratory.Weekday, updatedLaboratory.StartHour, updatedLaboratory.EndHour);
+                await _repository.UpdateAsync(id, exist);
+                await _repository.SaveAsync();
+            }
+            return exist.Id;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await _repository.DeleteByIdAsync<Domain.Entities.Laboratory>(id);
+            await _repository.SaveAsync();
         }
     }
 }

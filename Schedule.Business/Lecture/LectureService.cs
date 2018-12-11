@@ -17,10 +17,12 @@ namespace Schedule.Business.Lecture
 
         public Task<LectureDetailsModel> FindById(Guid id) => GetAllLecturesDetails().SingleOrDefaultAsync(c => c.Id == id);
 
-        public async Task<Guid> CreateNew(LectureCreateModel newLecture)
+        public async Task<Guid> CreateNew(Guid teacherId, Guid subjectId, LectureCreateModel newLecture)
         {
+            var teacher = await repository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
+            var subject = await repository.FindByIdAsync<Domain.Entities.Subject>(subjectId);
             var lecture = Domain.Entities.Lecture.Create(newLecture.Name, newLecture.Weekday,
-                newLecture.StartHour, newLecture.EndHour, newLecture.HalfYear);
+                newLecture.StartHour, newLecture.EndHour, newLecture.HalfYear, teacher, subject);
 
             await repository.AddNewAsync(lecture);
             await repository.SaveAsync();
@@ -28,13 +30,14 @@ namespace Schedule.Business.Lecture
             return lecture.Id;
         }
 
-        public async Task<Guid> Update(Guid id, LectureCreateModel updatedLecture)
+        public async Task<Guid> Update(Guid teacherId, Guid id, LectureCreateModel updatedLecture)
         {
+            var teacher = await repository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
             var exist = await repository.FindByIdAsync<Domain.Entities.Lecture>(id);
             if (exist != null)
             {
                 exist.Update(updatedLecture.Name, updatedLecture.Weekday,
-                    updatedLecture.StartHour, updatedLecture.EndHour, updatedLecture.HalfYear);
+                    updatedLecture.StartHour, updatedLecture.EndHour, updatedLecture.HalfYear, teacher);
                 await repository.UpdateAsync(id, exist);
                 await repository.SaveAsync();
             }
@@ -56,7 +59,8 @@ namespace Schedule.Business.Lecture
                 StartHour = l.StartHour,
                 EndHour = l.EndHour,
                 HalfYear = l.HalfYear,
-                Teachers = l.Teachers
+                Lecturer = l.Lecturer,
+                ParentSubject = l.ParentSubject
             });
     }
 }

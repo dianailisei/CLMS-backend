@@ -11,5 +11,9 @@ namespace Schedule.Business.Teacher
         Task<TeacherDetailsModel> FindById(Guid id);
 
         Task<Guid> CreateNew(TeacherCreateModel newTeacher);
+
+        Task<Guid> Update(Guid id, TeacherCreateModel updatedTeacher);
+
+        Task Delete(Guid id);
     }
 }

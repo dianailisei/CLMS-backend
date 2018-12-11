@@ -12,6 +12,7 @@ namespace Schedule.Business.Lecture
         public short StartHour { get; set; }
         public short EndHour { get; set; }
         public string HalfYear { get; set; }
-        public ICollection<Domain.Entities.Teacher> Teachers { get; set; }
+        public Domain.Entities.Teacher Lecturer { get; set; }
+        public Domain.Entities.Subject ParentSubject { get; set; }
     }
 }
