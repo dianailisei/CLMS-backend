@@ -9,9 +9,14 @@ namespace Schedule.Business.Teacher
 {
     public sealed class TeacherService : ITeacherService
     {
-        private readonly IRepository _repository;
+        private readonly IReadRepository _readRepository;
+        private readonly IWriteRepository _writeRepository;
 
-        public TeacherService(IRepository repository) => _repository = repository;
+        public TeacherService(IReadRepository readRepository, IWriteRepository writeRepository)
+        {
+            this._readRepository = readRepository;
+            this._writeRepository = writeRepository;
+        }
 
         public Task<List<TeacherDetailsModel>> GetAll() => GetAllTeachersDetails().ToListAsync();
 
@@ -22,21 +27,21 @@ namespace Schedule.Business.Teacher
             var teacher = Domain.Entities.Teacher.Create(newTeacher.FirstName, newTeacher.LastName,
                 newTeacher.Email, newTeacher.Password);
 
-            await _repository.AddNewAsync(teacher);
-            await _repository.SaveAsync();
+            await _writeRepository.AddNewAsync(teacher);
+            await _writeRepository.SaveAsync();
 
             return teacher.Id;
         }
 
         public async Task<Guid> Update(Guid id, TeacherCreateModel updatedTeacher)
         {
-            var exist = await _repository.FindByIdAsync<Domain.Entities.Teacher>(id);
+            var exist = await _readRepository.FindByIdAsync<Domain.Entities.Teacher>(id);
             if (exist != null)
             {
                 exist.Update(updatedTeacher.FirstName, updatedTeacher.LastName,
                     updatedTeacher.Email, updatedTeacher.Password);
-                await _repository.UpdateAsync(id, exist);
-                await _repository.SaveAsync();
+                await _writeRepository.UpdateAsync(id, exist);
+                await _writeRepository.SaveAsync();
             }
             return exist.Id;
         }
@@ -47,11 +52,11 @@ namespace Schedule.Business.Teacher
                 .Include(t => t.Subjects).ThenInclude(t => t.Lectures).Where(t => t.Id == id).FirstOrDefaultAsync();
 
 
-            await _repository.DeleteByIdAsync<Domain.Entities.Teacher>(id);
-            await _repository.SaveAsync();
+            await _writeRepository.DeleteByIdAsync<Domain.Entities.Teacher>(id);
+            await _writeRepository.SaveAsync();
         }
 
-        private IQueryable<TeacherDetailsModel> GetAllTeachersDetails() => _repository.GetAll<Domain.Entities.Teacher>()
+        private IQueryable<TeacherDetailsModel> GetAllTeachersDetails() => _readRepository.GetAll<Domain.Entities.Teacher>()
             .Select(t => new TeacherDetailsModel
             {
                 Id = t.Id,
