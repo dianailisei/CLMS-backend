@@ -12,10 +12,10 @@ namespace Schedule.Business.Subject
         private readonly IReadRepository _readRepository;
         private readonly IWriteRepository _writeRepository;
 
-        public SubjectService(IReadRepository _readRepository, IWriteRepository _writeRepository)
+        public SubjectService(IReadRepository readRepository, IWriteRepository writeRepository)
         {
-            this._readRepository = _readRepository;
-            this._writeRepository = _writeRepository;
+            this._readRepository = readRepository;
+            this._writeRepository = writeRepository;
         }
 
         public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().ToListAsync();
