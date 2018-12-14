@@ -9,9 +9,14 @@ namespace Schedule.Business.Lecture
 {
     public sealed class LectureService : ILectureService
     {
-        private readonly IRepository repository;
+        private readonly IReadRepository _readRepository;
+        private readonly IWriteRepository _writeRepository;
 
-        public LectureService(IRepository repository) => this.repository = repository;
+        public LectureService(IReadRepository _readRepository, IWriteRepository _writeRepository)
+        {
+            this._readRepository = _readRepository;
+            this._writeRepository = _writeRepository;
+        }
 
         public Task<List<LectureDetailsModel>> GetAll() => GetAllLecturesDetails().ToListAsync();
 
@@ -19,38 +24,38 @@ namespace Schedule.Business.Lecture
 
         public async Task<Guid> CreateNew(Guid teacherId, Guid subjectId, LectureCreateModel newLecture)
         {
-            var teacher = await repository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
-            var subject = await repository.FindByIdAsync<Domain.Entities.Subject>(subjectId);
+            var teacher = await _readRepository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
+            var subject = await _readRepository.FindByIdAsync<Domain.Entities.Subject>(subjectId);
             var lecture = Domain.Entities.Lecture.Create(newLecture.Name, newLecture.Weekday,
                 newLecture.StartHour, newLecture.EndHour, newLecture.HalfYear, teacher, subject);
 
-            await repository.AddNewAsync(lecture);
-            await repository.SaveAsync();
+            await _writeRepository.AddNewAsync(lecture);
+            await _writeRepository.SaveAsync();
 
             return lecture.Id;
         }
 
         public async Task<Guid> Update(Guid teacherId, Guid id, LectureCreateModel updatedLecture)
         {
-            var teacher = await repository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
-            var exist = await repository.FindByIdAsync<Domain.Entities.Lecture>(id);
+            var teacher = await _readRepository.FindByIdAsync<Domain.Entities.Teacher>(teacherId);
+            var exist = await _readRepository.FindByIdAsync<Domain.Entities.Lecture>(id);
             if (exist != null)
             {
                 exist.Update(updatedLecture.Name, updatedLecture.Weekday,
                     updatedLecture.StartHour, updatedLecture.EndHour, updatedLecture.HalfYear, teacher);
-                await repository.UpdateAsync(id, exist);
-                await repository.SaveAsync();
+                await _writeRepository.UpdateAsync(id, exist);
+                await _writeRepository.SaveAsync();
             }
             return exist.Id;
         }
 
         public async Task Delete(Guid id)
         {
-            await repository.DeleteByIdAsync<Domain.Entities.Lecture>(id);
-            await repository.SaveAsync();
+            await _writeRepository.DeleteByIdAsync<Domain.Entities.Lecture>(id);
+            await _writeRepository.SaveAsync();
         }
 
-        private IQueryable<LectureDetailsModel> GetAllLecturesDetails() => repository.GetAll<Domain.Entities.Lecture>()
+        private IQueryable<LectureDetailsModel> GetAllLecturesDetails() => _readRepository.GetAll<Domain.Entities.Lecture>()
             .Select(l => new LectureDetailsModel
             {
                 Id = l.Id,
