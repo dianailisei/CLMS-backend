@@ -30,5 +30,10 @@ namespace Schedule.Domain.Entities
             EndHour = endhour;
             
         }
+
+        public void Delete()
+        {
+            Available = false;
+        }
     }
 }

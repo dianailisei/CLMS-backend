@@ -27,5 +27,10 @@ namespace Schedule.Domain.Entities
         {
             Name = name;
         }
+
+        public void Delete()
+        {
+            Available = false;
+        }
     }
 }

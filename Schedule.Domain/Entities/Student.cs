@@ -34,5 +34,10 @@ namespace Schedule.Domain.Entities
             Group = group;
             Year = year;
         }
+
+        public void Delete()
+        {
+            Available = false;
+        }
     }
 }

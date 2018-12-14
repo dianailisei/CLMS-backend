@@ -52,6 +52,19 @@ namespace Schedule.Business.Teacher
                 .Include(t => t.Subjects).ThenInclude(t => t.Lectures).Where(t => t.Id == id).FirstOrDefaultAsync();
 
 
+            foreach (var subject in teacher.Subjects)
+            {
+                foreach (var lab in subject.Laboratories)
+                {
+                    await _writeRepository.DeleteByIdAsync<Domain.Entities.Laboratory>(lab.Id);
+                }
+
+                foreach (var lecture in subject.Lectures)
+                {
+                    await _writeRepository.DeleteByIdAsync<Domain.Entities.Lecture>(lecture.Id);
+                }
+            }
+
             await _writeRepository.DeleteByIdAsync<Domain.Entities.Teacher>(id);
             await _writeRepository.SaveAsync();
         }

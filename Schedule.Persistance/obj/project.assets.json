@@ -7303,7 +7303,6 @@
       "sha512": "+mMAfPku3xFvFgzEYtFYZ6yek8EJz6NJq6AhO/yaqW2RS+6INWS54dfhy3qOddX2EXqE1ZEhkz5L1Zf1F8rAdQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.tools/2.1.4",
-      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -14145,23 +14144,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miste\\.nuget\\packages\\": {},
+    "C:\\Users\\Mihai\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Persistance\\Schedule.Persistance.csproj",
+      "projectUniqueName": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Persistance\\Schedule.Persistance.csproj",
       "projectName": "Schedule.Persistance",
-      "projectPath": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Persistance\\Schedule.Persistance.csproj",
-      "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
-      "outputPath": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Persistance\\obj\\",
+      "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Persistance\\Schedule.Persistance.csproj",
+      "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Persistance\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -14174,8 +14173,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj": {
-              "projectPath": "G:\\Faculty\\Github\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj"
+            "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj": {
+              "projectPath": "C:\\Users\\Mihai\\source\\repos\\dianailisei\\CLMS-backend\\Schedule.Business\\Schedule.Business.csproj"
             }
           }
         }

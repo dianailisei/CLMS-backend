@@ -30,5 +30,10 @@ namespace Schedule.Domain.Entities
             HalfYear = halfyear;
             Lecturer = lecturer;
         }
+
+        public void Delete()
+        {
+            Available = false;
+        }
     }
 }

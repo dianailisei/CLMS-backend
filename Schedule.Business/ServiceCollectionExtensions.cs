@@ -21,6 +21,8 @@ namespace Schedule.Business
                 fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
             });
 
+            
+
             services.AddTransient<IValidator<StudentCreateModel>, StudentCreateModelValidator>();
 
             services.AddScoped<IStudentService, StudentService>();
@@ -28,7 +30,7 @@ namespace Schedule.Business
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ISubjectService, SubjectService>();
             services.AddScoped<ILectureService, LectureService>();
-            
+
             return services;
         }
     }

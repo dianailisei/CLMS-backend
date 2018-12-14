@@ -33,5 +33,10 @@ namespace Schedule.Domain.Entities
             Email = email;
             Password = password;
         }
+
+        public void Delete()
+        {
+            Available = false;
+        }
     }
 }

@@ -47,6 +47,20 @@ namespace Schedule.Business.Subject
 
         public async Task Delete(Guid id)
         {
+            var subject = await GetAllSubjectsDetails().Include(s => s.Laboratories)
+                .Include(s => s.Lectures).Where(s => s.Id == id).FirstOrDefaultAsync();
+
+
+            foreach (var lab in subject.Laboratories)
+            {
+                await _writeRepository.DeleteByIdAsync<Domain.Entities.Laboratory>(lab.Id);
+            }
+
+            foreach (var lecture in subject.Lectures)
+            {
+                await _writeRepository.DeleteByIdAsync<Domain.Entities.Lecture>(lecture.Id);
+            }
+
             await _writeRepository.DeleteByIdAsync<Domain.Entities.Subject>(id);
             await _writeRepository.SaveAsync();
         }

@@ -6,3 +6,12 @@ G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.
 G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.AssemblyInfo.cs
 G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.dll
 G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\bin\Debug\netcoreapp2.1\Schedule.Domain.deps.json
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.csprojAssemblyReference.cache
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.AssemblyInfoInputs.cache
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.AssemblyInfo.cs
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.dll
+C:\Users\Mihai\source\repos\dianailisei\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.pdb

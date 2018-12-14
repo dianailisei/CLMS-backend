@@ -65,6 +65,7 @@ namespace Schedule.Business.Laboratory
 
         public async Task Delete(Guid id)
         {
+            //await _writeRepository.DeleteByIdAsync<Domain.Entities.Laboratory>(id);
             await _writeRepository.DeleteByIdAsync<Domain.Entities.Laboratory>(id);
             await _writeRepository.SaveAsync();
         }
