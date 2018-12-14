@@ -11,7 +11,7 @@ namespace Schedule.Domain.Entities
         public string Group { get; private set; }
         public short Year { get; private set; }
 
-
+        // Validare in metode
         public static Student Create(string firstName, string lastName,
             string email, string pass, string group, short year) => new Student()
         {

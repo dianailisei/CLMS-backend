@@ -57,10 +57,10 @@ G:\Faculty\Github\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedul
 G:\Faculty\Github\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
 G:\Faculty\Github\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
 G:\Faculty\Github\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
-G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CoreCompileInputs.cache
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfoInputs.cache
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfo.cs
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CopyComplete
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
+G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache

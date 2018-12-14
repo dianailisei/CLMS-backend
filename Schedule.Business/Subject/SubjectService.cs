@@ -60,6 +60,7 @@ namespace Schedule.Business.Subject
                 Lectures = s.Lectures,
                 HeadOfDepartment = s.HeadOfDepartment
             });
+
         private IQueryable<SubjectDetailsModel> GetAllSubjectsDetailsByTeacherId(Guid teacherId) => _readRepository
             .GetAll<Domain.Entities.Subject>()
             .Where(s => s.HeadOfDepartment.Id == teacherId).Select(s => new SubjectDetailsModel
