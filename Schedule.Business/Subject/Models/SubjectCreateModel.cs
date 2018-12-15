@@ -6,8 +6,6 @@ namespace Schedule.Business.Subject
 {
     public class SubjectCreateModel
     {
-        [Required]
-        [MaxLength(100)]
         public string Name { get; set; }
     }
 }

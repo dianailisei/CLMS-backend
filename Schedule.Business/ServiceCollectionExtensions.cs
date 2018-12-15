@@ -2,11 +2,15 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Schedule.Business.Laboratory;
+using Schedule.Business.Laboratory.Validations;
 using Schedule.Business.Student;
 using Schedule.Business.Teacher;
 using Schedule.Business.Subject;
 using Schedule.Business.Lecture;
+using Schedule.Business.Lecture.Validations;
 using Schedule.Business.Student.Validations;
+using Schedule.Business.Subject.Validations;
+using Schedule.Business.Teacher.Validations;
 
 namespace Schedule.Business
 {
@@ -24,6 +28,10 @@ namespace Schedule.Business
             
 
             services.AddTransient<IValidator<StudentCreateModel>, StudentCreateModelValidator>();
+            services.AddTransient<IValidator<TeacherCreateModel>, TeacherCreateModelValidator>();
+            services.AddTransient<IValidator<SubjectCreateModel>, SubjectCreateModelValidator>();
+            services.AddTransient<IValidator<LectureCreateModel>, LectureCreateModelValidator>();
+            services.AddTransient<IValidator<LaboratoryCreateModel>, LaboratoryCreateModelValidator>();
 
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ILaboratoryService, LaboratoryService>();
