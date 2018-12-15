@@ -6,3 +6,4 @@ G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.
 G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.AssemblyInfo.cs
 G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.dll
 G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.pdb
+G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.csprojAssemblyReference.cache

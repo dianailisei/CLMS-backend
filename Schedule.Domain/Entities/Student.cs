@@ -4,12 +4,12 @@ namespace Schedule.Domain.Entities
 {
     public class Student : Entity
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public string Group { get; private set; }
-        public short Year { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Group { get; set; }
+        public short Year { get; set; }
 
         // Validare in metode
         public static Student Create(string firstName, string lastName,
