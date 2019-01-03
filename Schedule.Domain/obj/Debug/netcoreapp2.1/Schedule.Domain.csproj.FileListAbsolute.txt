@@ -24,3 +24,4 @@ C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2
 C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.AssemblyInfo.cs
 C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.dll
 C:\Users\Diana\Desktop\DotNot\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.pdb
+G:\Faculty\Github\CLMS-backend\Schedule.Domain\obj\Debug\netcoreapp2.1\Schedule.Domain.csprojAssemblyReference.cache
