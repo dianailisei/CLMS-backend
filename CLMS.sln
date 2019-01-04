@@ -27,17 +27,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schedule.UnitTests", "Sched
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schedule.IntegrationTests", "Schedule.IntegrationTests\Schedule.IntegrationTests.csproj", "{134E7CA8-092A-47CF-B3C9-EED0BBE4CF3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia.Api", "Trivia.Api\Trivia.Api.csproj", "{F3A983B0-342D-4A44-837B-19B3C9AFAE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivia.Api", "Trivia.Api\Trivia.Api.csproj", "{F3A983B0-342D-4A44-837B-19B3C9AFAE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia.Persistance", "Trivia.Persistance\Trivia.Persistance.csproj", "{2B67C2E6-496C-4E4F-953D-1FA80521B513}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivia.Persistance", "Trivia.Persistance\Trivia.Persistance.csproj", "{2B67C2E6-496C-4E4F-953D-1FA80521B513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia.Business", "Trivia.Business\Trivia.Business.csproj", "{95B9DD34-2406-4F72-BB1A-35860ECC7CCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivia.Business", "Trivia.Business\Trivia.Business.csproj", "{95B9DD34-2406-4F72-BB1A-35860ECC7CCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia.Domain", "Trivia.Domain\Trivia.Domain.csproj", "{6085CD67-156B-4F48-A7E6-40A92792A616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivia.Domain", "Trivia.Domain\Trivia.Domain.csproj", "{6085CD67-156B-4F48-A7E6-40A92792A616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia.IntegrationTests", "Trivia.IntegrationTests\Trivia.IntegrationTests.csproj", "{C4494853-497D-40F7-AE2C-808DE6CBE23B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivia.IntegrationTests", "Trivia.IntegrationTests\Trivia.IntegrationTests.csproj", "{C4494853-497D-40F7-AE2C-808DE6CBE23B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia.UnitTests", "Trivia.UnitTests\Trivia.UnitTests.csproj", "{2B35D221-A452-48CA-9402-C6E33ED819BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivia.UnitTests", "Trivia.UnitTests\Trivia.UnitTests.csproj", "{2B35D221-A452-48CA-9402-C6E33ED819BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
