@@ -11,5 +11,10 @@ namespace Trivia.Domain.Entities
         {
             Available = true;
         }
+
+        public void Delete()
+        {
+            Available = false;
+        }
     }
 }
