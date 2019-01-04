@@ -7,9 +7,11 @@ namespace Trivia.Business.Question.Validations
     {
         public QuestionCreateModelValidator()
         {
-            RuleFor(t => t.TeacherId).NotEmpty();
-            RuleFor(t => t.CourseId).NotEmpty();
-            RuleFor(t => t.Text).NotEmpty().MinimumLength(5);
+            RuleFor(q => q.TeacherId).NotEmpty();
+            RuleFor(q => q.CourseId).NotEmpty();
+            RuleFor(q => q.Duration).NotNull().Must(d => d > 0 && d <= 60);
+            RuleFor(q => q.Points).NotNull().Must(p => p > 0 && p < 10);
+            RuleFor(q => q.Text).NotEmpty().MinimumLength(5);
         }
     }
 }

@@ -32,17 +32,17 @@ namespace Trivia.Business.Answer
             return answer.Id;
         }
 
-        public async Task<Guid> Update(Guid id, AnswerCreateModel updatedAnswer)
-        {
-            var exist = await _readRepository.FindByIdAsync<Domain.Entities.Answer>(id);
-            if (exist != null)
-            {
-                exist.Update(updatedAnswer.StudentId, updatedAnswer.QuestionId, updatedAnswer.Text);
-                await _writeRepository.UpdateAsync(id, exist);
-                await _writeRepository.SaveAsync();
-            }
-            return exist.Id;
-        }
+        //public async Task<Guid> Update(Guid id, AnswerCreateModel updatedAnswer)
+        //{
+        //    var exist = await _readRepository.FindByIdAsync<Domain.Entities.Answer>(id);
+        //    if (exist != null)
+        //    {
+        //        exist.Update(updatedAnswer.StudentId, updatedAnswer.QuestionId, updatedAnswer.Text);
+        //        await _writeRepository.UpdateAsync(id, exist);
+        //        await _writeRepository.SaveAsync();
+        //    }
+        //    return exist.Id;
+        //}
 
         public async Task Delete(Guid id)
         {

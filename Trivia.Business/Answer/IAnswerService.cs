@@ -12,7 +12,7 @@ namespace Trivia.Business.Answer
 
         Task<Guid> CreateNew(AnswerCreateModel newAnswer);
 
-        Task<Guid> Update(Guid id, AnswerCreateModel updatedAnswer);
+        //Task<Guid> Update(Guid id, AnswerCreateModel updatedAnswer);
 
         Task Delete(Guid id);
     }
