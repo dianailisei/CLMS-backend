@@ -64,3 +64,17 @@ G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedul
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
 G:\Faculty\Github\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.deps.json
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.runtimeconfig.json
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.runtimeconfig.dev.json
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.dll
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfoInputs.cache
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfo.cs
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CopyComplete
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
