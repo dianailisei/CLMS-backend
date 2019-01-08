@@ -1,54 +1,38 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Schedule.Business.Laboratory;
-using Schedule.Business.Teacher;
-using Schedule.Persistance;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Schedule.Domain.Entities;
 
 namespace Schedule.UnitTests
 {
     [TestClass]
-    class LaboratoryUnitTests
+    public class LaboratoryUnitTests
     {
-        private LaboratoryService _labService;
-        private TeacherService _teacherService;
-
-        [TestInitialize]
-        public void Initialize()
-        {
-            var builder = new DbContextOptionsBuilder<ScheduleContext>().UseSqlServer("Server=den1.mssql8.gear.host; Database=dotnot;User Id=dotnot;Password=Do75j23S!1!v;");
-            ScheduleContext context = new ScheduleContext(builder.Options);
-            _labService = new LaboratoryService(context, context);
-            _teacherService = new TeacherService(context, context);
-        }
         [TestMethod]
-        public async void GetAll_InsertLaboratory_ReturnLaboratory()
+        public void Create_WhenGivenValidArguments_ShouldReturnNewLaboratoryWithGivenArguments()
         {
-            // Arrange
-            var teacher = new TeacherCreateModel()
-            {
-                FirstName = "Ion",
-                LastName = "Popescu",
-                Password = "1234"
-            };
+            //Arrange
+            var teacher = Teacher.Create("Florin", "Olariu", "florin@olariu.ro", "parolagrea");
+            var subject = Subject.Create(teacher, "Introducere in .NET");
 
-            await _teacherService.CreateNew(teacher);
+            //Act
+            var laboratory = Laboratory.Create("Laborator .NET", "A2", teacher, "Wednesday", 10, 12, subject);
 
-            var laboratory = new LaboratoryCreateModel()
-            {
-                Name = "Laborator2",
-                Group = "A1",
-                Weekday = "Thursday",
-                StartHour = 12,
-                EndHour = 14
-            };
+            //Assert
+            Assert.AreEqual("Laborator .NET", laboratory.Name);
+        }
 
-            // Act
-             // await _labService.CreateNew(laboratory);
-            
+        [TestMethod]
+        public void Update_WhenGivenValidArguments_ShouldUpdateExistingLaboratory()
+        {
+            //Arrange
+            var teacher = Teacher.Create("Florin", "Olariu", "florin@olariu.ro", "parolagrea");
+            var subject = Subject.Create(teacher, "Introducere in .NET");
+            var laboratory = Laboratory.Create("Laborator .NET", "A2", teacher, "Wednesday", 10, 12, subject);
 
-            // Assert
-           
+            //Act
+            laboratory.Update(laboratory.Name, laboratory.Group, laboratory.Teacher, "Friday", laboratory.StartHour, laboratory.EndHour);
 
+            //Assert
+            Assert.AreEqual("Friday", laboratory.Weekday);
         }
     }
 }

@@ -5858,6 +5858,7 @@
       "type": "package",
       "path": "fluentvalidation/8.1.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.8.1.1.nupkg.sha512",
         "fluentvalidation.nuspec",
@@ -5876,6 +5877,7 @@
       "type": "package",
       "path": "fluentvalidation.aspnetcore/8.1.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.aspnetcore.8.1.1.nupkg.sha512",
         "fluentvalidation.aspnetcore.nuspec",
@@ -6970,6 +6972,7 @@
       "sha512": "ab4+TZw3Sxqrr5TwrwVyABeQkhSxYMJXgG6yZw7T+r6Vz+hcOt+pK79o15ESG7kZvWAK9wRG7emnTIia5O6R1Q==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -15263,5 +15266,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Mihai\\Documents\\Visual Projects\\CLMS-backend\\Schedule.Api\\obj\\Schedule.Api.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
