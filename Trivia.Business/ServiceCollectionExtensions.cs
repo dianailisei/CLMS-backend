@@ -1,5 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using FluentValidation.AspNetCore;
+using FluentValidation;
+using Trivia.Business.Question;
+using Trivia.Business.Answer;
+using Trivia.Business.Question.Validations;
+using Trivia.Business.Answer.Validations;
 
 namespace Trivia.Business
 {
@@ -13,6 +18,12 @@ namespace Trivia.Business
             services.AddMvc().AddFluentValidation(fv => {
                 fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
             });
+
+            services.AddTransient<IValidator<QuestionCreateModel>, QuestionCreateModelValidator>();
+            services.AddTransient<IValidator<AnswerCreateModel>, AnswerCreateModelValidator>();
+
+            services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<IAnswerService, AnswerService>();
 
             return services;
         }

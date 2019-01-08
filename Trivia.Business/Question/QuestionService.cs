@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Trivia.Business.Question
 {
-    public class QuestionService : IQuestionService
+    public sealed class QuestionService : IQuestionService
     {
         private readonly IReadRepository _readRepository;
         private readonly IWriteRepository _writeRepository;
@@ -21,7 +21,7 @@ namespace Trivia.Business.Question
 
         public Task<List<QuestionDetailsModel>> GetAll() => GetAllQuestionsDetails().ToListAsync();
 
-        public Task<QuestionDetailsModel> FindById(Guid id) => GetAllQuestionsDetails().SingleOrDefaultAsync(c => c.Id == id);
+        public Task<QuestionDetailsModel> FindById(Guid id) => GetAllQuestionsDetails().SingleOrDefaultAsync(q => q.Id == id);
 
         public async Task<Guid> CreateNew(QuestionCreateModel newQuestion)
         {

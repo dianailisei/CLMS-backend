@@ -16,6 +16,8 @@ namespace Trivia.Persistance
             Database.EnsureCreated();
         }
 
+        internal DbSet<Question> Questions { get; set; }
+        internal DbSet<Answer> Answers { get; set; }
 
         public IQueryable<TEntity> GetAll<TEntity>() where TEntity : Entity
         {
