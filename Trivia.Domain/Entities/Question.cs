@@ -23,7 +23,7 @@ namespace Trivia.Domain.Entities
             Id = new Guid(),
             TeacherId = teacherId,
             CourseId = courseId,
-            AddTime = DateTime.Today,
+            AddTime = DateTime.Now,
             Duration = duration,
             Points = points,
             Text = text,
@@ -39,9 +39,13 @@ namespace Trivia.Domain.Entities
             Text = text;
         }
 
-        public void AddAnswer(Answer answer)
+        public bool AddAnswer(Answer answer)
         {
-            Answers.Add(answer);
+            if (AddTime.Minute + Duration >= answer.AnswerTime.Minute)
+                if (AddTime.Hour == answer.AnswerTime.Hour)
+                    if (AddTime.Date == answer.AnswerTime.Date)
+                        return true;
+            return false;
         }
     }
 }

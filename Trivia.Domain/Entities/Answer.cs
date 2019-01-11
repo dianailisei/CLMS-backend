@@ -14,7 +14,7 @@ namespace Trivia.Domain.Entities
             Id = new Guid(),
             StudentId = studentId,
             QuestionId = questionId,
-            AnswerTime = DateTime.Today,
+            AnswerTime = DateTime.Now,
             Text = text
         };
 

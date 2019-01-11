@@ -53,24 +53,24 @@ namespace Trivia.Business.Question
             return existingQuestion.Id;
         }
 
-        public async Task<bool> AddAnswer(AnswerCreateModel answer)
-        {
-            var existingQuestion = await _readRepository.FindByIdAsync<Domain.Entities.Question>(answer.QuestionId);
-            if (existingQuestion != null)
-            {
-                if (QuestionStillAvailable(existingQuestion.AddTime, existingQuestion.Duration))
-                {
-                    var addAnswer = Domain.Entities.Answer.Create(answer.StudentId, answer.QuestionId, answer.Text);
-                    existingQuestion.AddAnswer(addAnswer);
-                    existingQuestion.Answers.Add(addAnswer);
+        //public async Task<bool> AddAnswer(Guid questionId, AnswerCreateModel answer)
+        //{
+        //    var existingQuestion = await _readRepository.FindByIdAsync<Domain.Entities.Question>(questionId);
+        //    if (existingQuestion != null)
+        //    {
+        //        if (QuestionStillAvailable(existingQuestion.AddTime, existingQuestion.Duration))
+        //        {
+        //            var addAnswer = Domain.Entities.Answer.Create(answer.StudentId, questionId, answer.Text);
+        //            existingQuestion.AddAnswer(addAnswer);
+        //            existingQuestion.Answers.Add(addAnswer);
 
-                    await _writeRepository.UpdateAsync(existingQuestion.Id, existingQuestion);
-                    await _writeRepository.SaveAsync();
-                    return true;
-                }
-            }
-            return false;
-        }
+        //            await _writeRepository.UpdateAsync(existingQuestion.Id, existingQuestion);
+        //            await _writeRepository.SaveAsync();
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
 
         public async Task<Guid> Update(Guid id, QuestionCreateModel updatedQuestion)
         {
@@ -110,15 +110,5 @@ namespace Trivia.Business.Question
                 Text = q.Text,
                 Answers = q.Answers
             });
-
-        private bool QuestionStillAvailable(DateTime questionTime, short Duration)
-        {
-            var currentTime = DateTime.Today;
-            if (questionTime.Minute + Duration < currentTime.Minute)
-                if (questionTime.Hour == questionTime.Hour)
-                    if (questionTime.Date == currentTime.Date)
-                        return true;
-            return false;
-        }
     }
 }

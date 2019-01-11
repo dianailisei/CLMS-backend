@@ -17,7 +17,7 @@ namespace Trivia.Business.Question
 
         Task<Guid> Update(Guid id, QuestionCreateModel updatedQuestion);
 
-        Task<bool> AddAnswer(AnswerCreateModel answer);
+        //Task<bool> AddAnswer(Guid questionId, AnswerCreateModel answer);
 
         Task Delete(Guid id);
     }

@@ -25,11 +25,19 @@ namespace Trivia.Business.Answer
         public async Task<Guid> CreateNew(AnswerCreateModel newAnswer)
         {
             var answer = Domain.Entities.Answer.Create(newAnswer.StudentId, newAnswer.QuestionId, newAnswer.Text);
+            var question = await _readRepository.FindByIdAsync<Domain.Entities.Question>(newAnswer.QuestionId);
+            if(question == null)
+                return Guid.Parse("00000000-0000-0000-0000-000000000001");
+            var added = question.AddAnswer(answer);
+            if(added)
+            {
+                await _writeRepository.AddNewAsync(answer);
+                await _writeRepository.UpdateAsync(question.Id, question);
+                await _writeRepository.SaveAsync();
 
-            await _writeRepository.AddNewAsync(answer);
-            await _writeRepository.SaveAsync();
-
-            return answer.Id;
+                return answer.Id;
+            }
+            return Guid.Parse("00000000-0000-0000-0000-000000000000");
         }
 
         //public async Task<Guid> Update(Guid id, AnswerCreateModel updatedAnswer)

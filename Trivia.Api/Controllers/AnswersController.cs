@@ -36,6 +36,10 @@ namespace Trivia.Api.Controllers
             }
 
             var answerId = await _answerService.CreateNew(answerCreateModel);
+            if (answerId.ToString() == Guid.Parse("00000000-0000-0000-0000-000000000001").ToString())
+                return StatusCode(503, "Error! The question does not exist!");
+            if (answerId.ToString() == Guid.Parse("00000000-0000-0000-0000-000000000000").ToString())
+                return StatusCode(503, "Error! The available time to answer has expired!");
             return CreatedAtRoute("FindAnswerById", new { id = answerId }, answerCreateModel);
         }
 

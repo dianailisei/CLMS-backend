@@ -13,7 +13,6 @@ namespace Trivia.Persistance
             : base(options)
         {
             Database.Migrate();
-            Database.EnsureCreated();
         }
 
         internal DbSet<Question> Questions { get; set; }
