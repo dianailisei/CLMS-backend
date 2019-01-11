@@ -22,6 +22,8 @@ namespace Schedule.Business.Student
 
         public Task<StudentDetailsModel> FindById(Guid id) => GetAllStudentsDetails().SingleOrDefaultAsync(c => c.Id == id);
 
+        public Task<StudentDetailsModel> Login(string email, string pwd) => GetAllStudentsDetails().FirstOrDefaultAsync(c => c.Email == email && c.Password == pwd);
+
         public async Task<Guid> CreateNew(StudentCreateModel newStudent)
         {
             var student = Domain.Entities.Student.Create(newStudent.FirstName, newStudent.LastName,
