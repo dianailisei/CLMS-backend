@@ -10,6 +10,8 @@ namespace Schedule.Business.Teacher
 
         Task<TeacherDetailsModel> FindById(Guid id);
 
+        Task<TeacherDetailsModel> Login(string email, string pwd);
+
         Task<Guid> CreateNew(TeacherCreateModel newTeacher);
 
         Task<Guid> Update(Guid id, TeacherCreateModel updatedTeacher);

@@ -78,3 +78,19 @@ C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Persistance\obj\D
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.csproj.CopyComplete
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.dll
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.deps.json
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.runtimeconfig.json
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.runtimeconfig.dev.json
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Persistance.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Business.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.csprojAssemblyReference.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.csproj.CoreCompileInputs.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.AssemblyInfoInputs.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.AssemblyInfo.cs
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.csproj.CopyComplete
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Persistance\obj\Debug\netcoreapp2.1\Schedule.Persistance.pdb
