@@ -79,7 +79,7 @@ namespace Schedule.Business.Teacher
                 LastName = t.LastName,
                 Email = t.Email,
                 Password = t.Password,
-                Subjects = t.Subjects
+                Subjects = t.Subjects.Where(s => s.Available == true).ToList()
             });
     }
 }
