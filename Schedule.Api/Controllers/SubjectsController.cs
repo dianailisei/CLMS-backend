@@ -43,7 +43,7 @@ namespace Schedule.Api.Controllers
         public async Task<IActionResult> GetSubjectsByTeacherId(Guid teacherId)
         {
             var subjects = await this.subjectService.GetAllSubjects();
-            return Ok();
+            return Ok(subjects);
         }
 
         [HttpPut("{id:guid}")]

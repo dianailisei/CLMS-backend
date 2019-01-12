@@ -13,6 +13,6 @@ namespace Schedule.Business.Lecture
         public short EndHour { get; set; }
         public string HalfYear { get; set; }
         public Domain.Entities.Teacher Lecturer { get; set; }
-        public Domain.Entities.Subject ParentSubject { get; set; }
+        public Domain.Entities.Subject ParentSubject { get; set; }  
     }
 }
