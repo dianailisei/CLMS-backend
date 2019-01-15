@@ -20,6 +20,14 @@ namespace Schedule.Business.Subject
 
         public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().ToListAsync();
 
+        public async Task<List<SubjectDetailsModel>> GetSubjectsByTeacher(Guid teacherId) => await GetAllSubjectsDetails().Where(s => s.HeadOfDepartment.Id == teacherId).ToListAsync();
+
+        public async Task<List<SubjectDetailsModel>> GetSubjectsByStudent(Guid studentId)
+        {
+            var student = await _readRepository.FindByIdAsync<Domain.Entities.Student>(studentId);
+            return await GetAllSubjectsDetails().Where(s => s.Year == student.Year).ToListAsync();
+        }
+
         public async Task<SubjectDetailsModel> FindById(Guid id) => await GetAllSubjectsDetails().SingleOrDefaultAsync(s => s.Id == id);
 
         public async Task<Guid> CreateNew(Guid teacherGuid, SubjectCreateModel newSubject)
@@ -70,6 +78,7 @@ namespace Schedule.Business.Subject
             {
                 Id = s.Id,
                 Name = s.Name,
+                Year = s.Year,
                 Laboratories = s.Laboratories,
                 Lectures = s.Lectures,
                 HeadOfDepartment = s.HeadOfDepartment
