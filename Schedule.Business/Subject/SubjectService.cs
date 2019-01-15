@@ -20,6 +20,8 @@ namespace Schedule.Business.Subject
 
         public async Task<List<SubjectDetailsModel>> GetAllSubjects() => await GetAllSubjectsDetails().ToListAsync();
 
+        public async Task<List<SubjectDetailsModel>> GetSubjectsByTeacher(Guid teacherId) => await GetAllSubjectsDetails().Where(s => s.HeadOfDepartment.Id == teacherId).ToListAsync();
+
         public async Task<SubjectDetailsModel> FindById(Guid id) => await GetAllSubjectsDetails().SingleOrDefaultAsync(s => s.Id == id);
 
         public async Task<Guid> CreateNew(Guid teacherGuid, SubjectCreateModel newSubject)

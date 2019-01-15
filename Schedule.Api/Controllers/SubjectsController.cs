@@ -36,13 +36,13 @@ namespace Schedule.Api.Controllers
             }
 
             var subjectId = await this.subjectService.CreateNew(teacherId, model);
-            return CreatedAtRoute("FindSubjectById", new { id = subjectId }, model);
+            return Ok(subjectId);
         }
 
         [HttpGet("/teachers/{teacherId:guid}")]
         public async Task<IActionResult> GetSubjectsByTeacherId(Guid teacherId)
         {
-            var subjects = await this.subjectService.GetAllSubjects();
+            var subjects = await this.subjectService.GetSubjectsByTeacher(teacherId);
             return Ok(subjects);
         }
 

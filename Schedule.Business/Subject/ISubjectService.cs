@@ -14,6 +14,8 @@ namespace Schedule.Business.Subject
 
         Task<List<SubjectDetailsModel>> GetAllSubjects();
 
+        Task<List<SubjectDetailsModel>> GetSubjectsByTeacher(Guid teacherId);
+
         Task<Guid> Update(Guid id, SubjectCreateModel updatedSubject);
 
         Task Delete(Guid id);
