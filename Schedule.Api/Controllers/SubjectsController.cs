@@ -46,6 +46,13 @@ namespace Schedule.Api.Controllers
             return Ok(subjects);
         }
 
+        [HttpGet("/students/{studentId:guid}")]
+        public async Task<IActionResult> GetSubjectsByStudentId(Guid studentId)
+        {
+            var subjects = await this.subjectService.GetSubjectsByStudent(studentId);
+            return Ok(subjects);
+        }
+
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateSubject(Guid id, [FromBody] SubjectCreateModel subjectUpdateModel)
         {

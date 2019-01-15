@@ -11,6 +11,8 @@ namespace Attendance.Business.Presence
 
         Task<PresenceDetailsModel> FindById(Guid id);
 
+        Task<List<PresenceDetailsModel>> GetPresencesByStudentAndLaboratory(Guid studId, Guid labId);
+
         Task<Guid> Create(PresenceCreateModel newPresence);
 
        // Task<Guid> Update(Guid id, SessionUpdateModel updatedPresence);

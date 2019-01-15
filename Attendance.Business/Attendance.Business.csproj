@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Presence\Validations\" />
-    <Folder Include="Session\Validations\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Attendance.Domain\Attendance.Domain.csproj" />
   </ItemGroup>
 

@@ -21,8 +21,8 @@ namespace Attendance.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddBusiness().AddPersistance("Server=den1.mssql8.gear.host; Database=dotnot;User Id=dotnot;Password=Do75j23S!1!v;");
-            services.AddBusiness().AddPersistance(@"Server=DESKTOP-99S221B;Database=Attendance;Trusted_Connection=True;");
+            services.AddBusiness().AddPersistance("Server=den1.mssql7.gear.host; Database=dotnotattendance;User Id=dotnotattendance;Password=Zn679H~81v7_;");
+            //services.AddBusiness().AddPersistance(@"Server=DESKTOP-99S221B;Database=Attendance;Trusted_Connection=True;");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc();

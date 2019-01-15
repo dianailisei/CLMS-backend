@@ -23,6 +23,9 @@ namespace Attendance.Business.Presence
 
         public Task<PresenceDetailsModel> FindById(Guid id) => GetAllPresencesDetails().SingleOrDefaultAsync(s => s.Id == id);
 
+        public Task<List<PresenceDetailsModel>> GetPresencesByStudentAndLaboratory(Guid studId, Guid labId)
+            => GetAllPresencesDetails().Where(p => p.StudentId == studId && p.SessionEnrolled.LaboratoryId == labId).ToListAsync();
+
         public async Task<Guid> Create(PresenceCreateModel newPresence)
         {
             var sessions = _readRepository.GetAll<Domain.Session>().Where(s => s.ConfirmationCode.Equals(newPresence.ConfirmationCode));

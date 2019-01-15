@@ -71,7 +71,6 @@ C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debu
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
-C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CoreCompileInputs.cache
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfoInputs.cache
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.AssemblyInfo.cs
@@ -92,3 +91,4 @@ F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedu
 F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csproj.CopyComplete
 F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.dll
 F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.pdb
+C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Business\obj\Debug\netcoreapp2.1\Schedule.Business.csprojAssemblyReference.cache

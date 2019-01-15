@@ -12,6 +12,8 @@ namespace Schedule.Business.Subject
 
         Task<List<SubjectDetailsModel>> GetAllByTeacherId(Guid teacherGuid);
 
+        Task<List<SubjectDetailsModel>> GetSubjectsByStudent(Guid studentGuid);
+
         Task<List<SubjectDetailsModel>> GetAllSubjects();
 
         Task<List<SubjectDetailsModel>> GetSubjectsByTeacher(Guid teacherId);

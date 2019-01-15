@@ -22,11 +22,18 @@ namespace Attendance.Api.Controllers
             return Ok(presence);
         }
 
-        [HttpGet("{id:guid}", Name = "FindPresenceById")]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> FindPresenceById(Guid id)
         {
             var presence = await _presenceService.FindById(id);
             return Ok(presence);
+        }
+        
+        [HttpGet("student/{studId:guid}/laboratory/{labId:guid}")]
+        public async Task<IActionResult> GetPresencesByStudentAndLaboratory(Guid studId, Guid labId)
+        {
+            var presences = await _presenceService.GetPresencesByStudentAndLaboratory(studId, labId);
+            return Ok(presences);
         }
 
         [HttpPost]
@@ -37,8 +44,8 @@ namespace Attendance.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var presenceId = await _presenceService.Create(presenceCreateModel);
-            return CreatedAtRoute("FindPresenceById", new { id = presenceId }, presenceCreateModel);
+            var presence = await _presenceService.Create(presenceCreateModel);
+            return NoContent();
         }
 
         [HttpDelete("{id:guid}")]
