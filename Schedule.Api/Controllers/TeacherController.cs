@@ -30,6 +30,13 @@ namespace Schedule.Api.Controllers
             return Ok(teacher);
         }
 
+        [HttpGet("{email}/{pwd}")]
+        public async Task<IActionResult> Login(string email, string pwd)
+        {
+            var teacher = await _teacherService.Login(email, pwd);
+            return Ok(teacher);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateTeacher([FromBody] TeacherCreateModel teacherCreateModel)
         {

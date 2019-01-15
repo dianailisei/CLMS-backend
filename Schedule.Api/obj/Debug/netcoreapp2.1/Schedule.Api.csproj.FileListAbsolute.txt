@@ -103,3 +103,24 @@ C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Api\obj\Debug\net
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.csproj.CopyComplete
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.dll
 C:\Users\Mihai\Documents\Visual Projects\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Api.deps.json
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Api.runtimeconfig.json
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Api.runtimeconfig.dev.json
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Api.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Api.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Business.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Domain.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Persistance.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Business.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Persistance.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\bin\Debug\netcoreapp2.1\Schedule.Domain.pdb
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.csprojAssemblyReference.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.csproj.CoreCompileInputs.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.RazorAssemblyInfo.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.RazorAssemblyInfo.cs
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.AssemblyInfoInputs.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.AssemblyInfo.cs
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.RazorTargetAssemblyInfo.cache
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.csproj.CopyComplete
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.dll
+F:\Facultate\Anul III\Semestrul I\Introducere in .NET\DotNot\CLMS-backend\Schedule.Api\obj\Debug\netcoreapp2.1\Schedule.Api.pdb

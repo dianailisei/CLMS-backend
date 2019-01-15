@@ -28,6 +28,13 @@ namespace Schedule.Api.Controllers
             return Ok(student);
         }
 
+        [HttpGet("{email}/{pwd}")]
+        public async Task<IActionResult> Login(string email, string pwd)
+        {
+            var student = await studentService.Login(email, pwd);
+            return Ok(student);
+        }
+         
         [HttpPost]
         public async Task<IActionResult> CreateStudent([FromBody] StudentCreateModel studentCreateModel)
         {

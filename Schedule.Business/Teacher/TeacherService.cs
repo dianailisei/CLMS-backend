@@ -33,6 +33,8 @@ namespace Schedule.Business.Teacher
             return teacher.Id;
         }
 
+        public Task<TeacherDetailsModel> Login(string email, string pwd) => GetAllTeachersDetails().FirstOrDefaultAsync(c => c.Email == email && c.Password == pwd);
+
         public async Task<Guid> Update(Guid id, TeacherCreateModel updatedTeacher)
         {
             var exist = await _readRepository.FindByIdAsync<Domain.Entities.Teacher>(id);
@@ -77,7 +79,7 @@ namespace Schedule.Business.Teacher
                 LastName = t.LastName,
                 Email = t.Email,
                 Password = t.Password,
-                Subjects = t.Subjects
+                Subjects = t.Subjects.Where(s => s.Available == true).ToList()
             });
     }
 }
