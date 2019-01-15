@@ -23,14 +23,16 @@ namespace Attendance.Business.Session
 
         public Task<SessionDetailsModel> FindById(Guid id) => GetAllSessionsDetails().SingleOrDefaultAsync(s => s.Id == id);
 
-        public async Task<Guid> CreateNew(SessionCreateModel newSession)
+        public Task<List<SessionDetailsModel>> FindByLaboratory(Guid id) => GetAllSessionsDetails().Where(s=>s.LaboratoryId == id).ToListAsync();
+
+        public async Task<SessionDetailsModel> CreateNew(SessionCreateModel newSession)
         {
             var session = Domain.Session.Create(newSession.LaboratoryId, GenerateConfirmationCode(), newSession.Duration);
 
             await _writeRepository.AddNewAsync(session);
             await _writeRepository.SaveAsync();
 
-            return session.Id;
+            return await FindById(session.Id);
         }
 
         public async Task<Guid> Update(Guid id, SessionUpdateModel updatedSession)

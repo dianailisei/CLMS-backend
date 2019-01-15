@@ -11,7 +11,9 @@ namespace Attendance.Business.Session
 
         Task<SessionDetailsModel> FindById(Guid id);
 
-        Task<Guid> CreateNew(SessionCreateModel newSession);
+        Task<List<SessionDetailsModel>> FindByLaboratory(Guid id);
+
+        Task<SessionDetailsModel> CreateNew(SessionCreateModel newSession);
 
         Task<Guid> Update(Guid id, SessionUpdateModel updateSession);
 
