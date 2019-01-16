@@ -24,9 +24,10 @@ namespace Schedule.Domain.Entities
             HeadOfDepartment = headOfDepartment
         };
 
-        public void Update(string name)
+        public void Update(string name, short year)
         {
             Name = name;
+            Year = year;
         }
 
         public void Delete()

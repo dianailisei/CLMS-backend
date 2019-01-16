@@ -46,7 +46,7 @@ namespace Schedule.Business.Subject
             var subject = await _readRepository.FindByIdAsync<Domain.Entities.Subject>(id);
             if (subject != null)
             {
-                subject.Update(updatedSubject.Name);
+                subject.Update(updatedSubject.Name, updatedSubject.Year);
                 await _writeRepository.UpdateAsync(id, subject);
                 await _writeRepository.SaveAsync();
             }
