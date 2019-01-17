@@ -34,7 +34,7 @@ namespace Schedule.Api.Controllers
             var student = await studentService.Login(email, pwd);
             return Ok(student);
         }
-         
+
         [HttpPost]
         public async Task<IActionResult> CreateStudent([FromBody] StudentCreateModel studentCreateModel)
         {
