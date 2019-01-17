@@ -42,7 +42,7 @@ namespace Schedule.Api.Controllers
             return CreatedAtRoute("FindLaboratoryById", new {id = labId}, laboratoryCreateModel);
         }
 
-        [HttpPut("/teachers/{teacherId}/[controller]")]
+        [HttpPut("/teachers/{teacherId}/[controller]/{id}")]
         public async Task<IActionResult> UpdateLaboratory(Guid teacherId, Guid id, [FromBody] LaboratoryCreateModel laboratoryUpdateModel)
         {
             if (!ModelState.IsValid)

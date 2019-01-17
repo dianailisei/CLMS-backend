@@ -40,7 +40,7 @@ namespace Schedule.Api.Controllers
             return CreatedAtRoute("FindLectureById", new { id = lectureId }, lectureCreateModel);
         }
 
-        [HttpPut("/teachers/{lecturerId}/[controller]")]
+        [HttpPut("/teachers/{lecturerId}/[controller]/{id}")]
         public async Task<IActionResult> UpdateLecture(Guid lecturerId, Guid id, [FromBody] LectureCreateModel lectureUpdateModel)
         {
             if (!ModelState.IsValid)
