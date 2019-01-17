@@ -23,6 +23,8 @@ namespace Trivia.Business.Question
 
         public Task<QuestionDetailsModel> FindById(Guid id) => GetAllQuestionsDetails().SingleOrDefaultAsync(q => q.Id == id);
 
+        public Task<QuestionDetailsModel> FindByCourseId(Guid id) => GetAllQuestionsDetails().SingleOrDefaultAsync(q => q.CourseId == id);
+
         public async Task<Guid> CreateNew(QuestionCreateModel newQuestion)
         {
             var question = Domain.Entities.Question.Create(newQuestion.TeacherId, newQuestion.CourseId, newQuestion.Duration,

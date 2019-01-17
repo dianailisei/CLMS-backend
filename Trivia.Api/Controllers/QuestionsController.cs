@@ -27,6 +27,13 @@ namespace Trivia.Api.Controllers
             return Ok(question);
         }
 
+        [HttpGet("courses/{id:guid}", Name = "FindQuestionByCourseId")]
+        public async Task<IActionResult> FindQuestionByCourseId(Guid id)
+        {
+            var question = await _questionService.FindByCourseId(id);
+            return Ok(question);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateQuestionForLecture([FromBody] QuestionCreateModel questionCreateModel)
         {
