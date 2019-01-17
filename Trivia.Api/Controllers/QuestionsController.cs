@@ -39,7 +39,7 @@ namespace Trivia.Api.Controllers
             return CreatedAtRoute("FindQuestionById", new { id = questionId }, questionCreateModel);
         }
 
-        [HttpPut]
+        [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateQuestion(Guid id, [FromBody] QuestionCreateModel questionUpdateModel)
         {
             if (!ModelState.IsValid)
