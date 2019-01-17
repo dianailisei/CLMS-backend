@@ -28,6 +28,13 @@ namespace Schedule.Api.Controllers
             return Ok(lecture);
         }
 
+        [HttpGet("students/{id:guid}")]
+        public async Task<IActionResult> GetLecturesByStudentId(Guid id)
+        {
+            var lectures = await lectureService.GetLecturesByStudent(id);
+            return Ok(lectures);
+        }
+
         [HttpPost("/subjects/{subjectId:guid}/teachers/{lecturerId}/[controller]")]
         public async Task<IActionResult> CreateLecture(Guid lecturerId, Guid subjectId, [FromBody] LectureCreateModel lectureCreateModel)
         {

@@ -19,6 +19,14 @@ namespace Schedule.Business.Lecture
         }
 
         public Task<List<LectureDetailsModel>> GetAll() => GetAllLecturesDetails().ToListAsync();
+        public async Task<List<LectureDetailsModel>> GetLecturesByStudent(Guid id)
+        {
+            var student = await _readRepository.FindByIdAsync<Domain.Entities.Student>(id);
+            
+            var lectures = await GetAllLecturesDetails().Where(l => l.HalfYear.Equals(student.Group[0].ToString()) && l.ParentSubject.Year == student.Year).ToListAsync();
+
+            return lectures;
+        }
 
         public Task<LectureDetailsModel> FindById(Guid id) => GetAllLecturesDetails().SingleOrDefaultAsync(c => c.Id == id);
 
