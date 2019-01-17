@@ -11,7 +11,7 @@ namespace Trivia.Business.Question
 
         Task<QuestionDetailsModel> FindById(Guid id);
 
-        Task<QuestionDetailsModel> FindByCourseId(Guid id);
+        Task<List<QuestionDetailsModel>> FindByCourseId(Guid id);
 
         Task<Guid> CreateNew(QuestionCreateModel newQuestion);
 
